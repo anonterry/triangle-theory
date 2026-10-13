@@ -3,19 +3,39 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>My Site</title>
-  <meta name="description" content="A simple static site hosted on GitHub Pages.">
+  <title>Triangle Theory</title>
+  <meta name="description" content="A quiz that maps how romance, sexuality and friendship fit together for you.">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header>
-    <h1>My Site</h1>
-    <nav><a href="./">Home</a></nav>
-  </header>
   <main>
-    <p id="greeting">Loading…</p>
+    <section id="intro">
+      <h1>Triangle Theory</h1>
+      <p class="lead">Relationships are built from three ingredients: <strong>romance</strong>, <strong>sexuality</strong> and <strong>friendship</strong>. Everyone blends them differently. Answer <span id="count">23</span> quick questions to see where you land on the triangle.</p>
+      <p class="small">Just for fun and self-reflection. Not a clinical tool. Nothing you answer leaves your browser.</p>
+      <button id="start" class="primary" type="button">Start the quiz</button>
+    </section>
+
+    <section id="quiz" hidden>
+      <div class="progress"><div id="progress-bar"></div></div>
+      <p id="progress-text" class="small"></p>
+      <h2 id="question"></h2>
+      <div id="answers"></div>
+      <button id="back" type="button" class="link">&larr; Back</button>
+    </section>
+
+    <section id="result" hidden>
+      <canvas id="card" role="img"></canvas>
+      <div class="actions">
+        <button id="download" class="primary" type="button">Save image</button>
+        <button id="share" type="button">Share</button>
+        <button id="retake" type="button">Retake quiz</button>
+      </div>
+    </section>
   </main>
-  <footer><small>&copy; <span id="year"></span></small></footer>
+  <script src="js/questions.js"></script>
+  <script src="js/regions.js"></script>
+  <script src="js/chart.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>
