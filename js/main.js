@@ -68,12 +68,10 @@
     $("r-name").textContent = result.region.name; $("r-desc").textContent = result.region.desc;
     $("traits").innerHTML = ["Romance", "Sexuality", "Friendship"].map((l, i) => `<div class="trait"><span>${l}</span><div class="trait-track"><div class="trait-fill" data-w="${pct[i]}"></div></div><strong>${pct[i]}%</strong></div>`).join("");
     $("legend").innerHTML = window.REGIONS.map(r => `<li class="${r === result.region ? "mine" : ""}" style="--c:rgb(${r.color})"><i></i><span><b>${r.name}</b>${r.desc}</span></li>`).join("");
-    // buttons differ for owners vs. visitors of a shared link
-    $("take").hidden = !shared; $("retake").hidden = shared;
-    $("download").className = shared ? "secondary" : "primary";
-    $("download").textContent = shared ? "Save image" : "Save my result ✦";
-    $("share").textContent = shared ? "Copy link" : "Share link";
-    $("share-box").hidden = true; $("save-note").textContent = "";
+    // visitors of a shared link get only "Take it yourself"
+    $("take").hidden = !shared; $("owner-actions").hidden = shared;
+    if (!shared) $("share-url").value = shareUrl();
+    $("save-note").textContent = "";
     document.title = (name ? name + "'s " : "") + "Triangle Theory result";
     show("result"); drawResult();
     requestAnimationFrame(() => requestAnimationFrame(() => document.querySelectorAll(".trait-fill").forEach(e => e.style.width = e.dataset.w + "%")));
@@ -98,19 +96,14 @@
     if (name) p.set("name", name); p.set("c", accentIdx);
     return `${base}r/${result.region.id}/?${p}`;
   }
-  async function share() {
-    const url = shareUrl(), input = $("share-url");
-    $("share-box").hidden = false; input.value = url;
-    let copied = false;
-    try { await navigator.clipboard.writeText(url); copied = true; } catch (e) { input.focus(); input.select(); }
-    $("save-note").textContent = copied ? "Link copied. Paste it into Discord, a text, anywhere." : "Copy the link above.";
-    if (!shared && navigator.share && window.matchMedia("(pointer:coarse)").matches) {
+  async function copyAgain() {
+    const input = $("share-url"), url = shareUrl(); input.value = url; input.focus(); input.select();
+    let ok = false;
+    try { await navigator.clipboard.writeText(url); ok = true; } catch (e) {}
+    $("save-note").textContent = ok ? "Link copied. Paste it into Discord, a text, anywhere." : "Select the link above and copy it.";
+    if (ok && navigator.share && window.matchMedia("(pointer:coarse)").matches) {
       try { await navigator.share({ title: "My Triangle Theory result", text: `${name || "I"} ${name ? "is" : "am"} a ${result.region.name}`, url }); } catch (e) {}
     }
-  }
-  async function copyAgain() {
-    const input = $("share-url"); input.focus(); input.select();
-    try { await navigator.clipboard.writeText(input.value); $("save-note").textContent = "Link copied."; } catch (e) {}
   }
 
   // open a shared result: ?r=&s=&f=[&name=][&c=]
@@ -131,7 +124,7 @@
   $("name").addEventListener("keydown", e => { if (e.key === "Enter") start(); });
   $("back").onclick = () => { if (idx > 0) { idx--; render(); } };
   $("retake").onclick = () => { show("intro"); };
-  $("download").onclick = download; $("share").onclick = share; $("copy").onclick = copyAgain;
+  $("download").onclick = download; $("copy").onclick = copyAgain;
   $("count").textContent = Q.length;
   if (!fromQuery()) show("intro");
   if (document.fonts && document.fonts.ready) document.fonts.ready.then(drawResult).catch(() => {});

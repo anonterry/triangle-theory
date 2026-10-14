@@ -25,6 +25,7 @@
     const regions = window.REGIONS;
     const off = document.createElement("canvas"); off.width = BOX.w; off.height = BOX.h;
     const octx = off.getContext("2d"), img = octx.createImageData(BOX.w, BOX.h);
+    const mask = o.og ? new Uint8Array(BOX.w * BOX.h) : null;
     const cxy = regions.map(r => pt(...r.center));
     const [x1, y1] = V.R, [x2, y2] = V.S, [x3, y3] = V.F;
     const det = (y2 - y3) * (x1 - x3) + (x3 - x2) * (y1 - y3);
@@ -34,12 +35,20 @@
       let bi = 0, bd = Infinity;
       for (let i = 0; i < cxy.length; i++) { const d = (x - cxy[i][0]) ** 2 + (y - cxy[i][1]) ** 2; if (d < bd) { bd = d; bi = i; } }
       const c = regions[bi].color, p = (y * BOX.w + x) * 4;
-      img.data[p] = c[0]; img.data[p + 1] = c[1]; img.data[p + 2] = c[2]; img.data[p + 3] = regions[bi] === result.region ? 105 : 40;
+      img.data[p] = c[0]; img.data[p + 1] = c[1]; img.data[p + 2] = c[2]; const hi = regions[bi] === result.region; if (o.og) mask[y * BOX.w + x] = hi ? 1 : 0;
+      img.data[p + 3] = o.og ? (hi ? 215 : 16) : (hi ? 105 : 40);
+    }
+    if (o.og) { // crisp white outline around the highlighted zone
+      const R = 3;
+      for (let y = R; y < BOX.h - R; y++) for (let x = R; x < BOX.w - R; x++) {
+        const i = y * BOX.w + x;
+        if (mask[i] && (!mask[i - R] || !mask[i + R] || !mask[i - R * BOX.w] || !mask[i + R * BOX.w])) { const p = i * 4; img.data[p] = img.data[p + 1] = img.data[p + 2] = 255; img.data[p + 3] = 255; }
+      }
     }
     octx.putImageData(img, 0, 0);
     ctx.drawImage(off, 0, 0);
 
-    ctx.strokeStyle = "rgba(255,255,255,.16)"; ctx.lineWidth = 1 / k;
+    ctx.strokeStyle = o.og ? "rgba(255,255,255,.07)" : "rgba(255,255,255,.16)"; ctx.lineWidth = 1 / k;
     for (let n = 1; n < 10; n++) {
       const t = n / 10;
       for (const [a, b] of [[pt(t, 1 - t, 0), pt(t, 0, 1 - t)], [pt(1 - t, t, 0), pt(0, t, 1 - t)], [pt(1 - t, 0, t), pt(0, 1 - t, t)]]) { ctx.beginPath(); ctx.moveTo(...a); ctx.lineTo(...b); ctx.stroke(); }
@@ -63,6 +72,7 @@
       ctx.fillStyle = "#8a8af5"; ctx.textAlign = "center"; ctx.fillText("aromantic line", 410, 592);
       ctx.font = `700 12px ${SANS}`; ctx.textBaseline = "middle";
       regions.forEach((r, i) => {
+        if (o.og && r !== result.region) return;
         const lines = splitName(r.name), [x, y] = cxy[i];
         lines.forEach((ln, j) => {
           const yy = y + (j - (lines.length - 1) / 2) * 14;
@@ -138,7 +148,7 @@
     const g = ctx.createRadialGradient(240, 0, 0, 240, 0, 700); g.addColorStop(0, accent + "33"); g.addColorStop(1, accent + "00");
     ctx.fillStyle = g; ctx.fillRect(0, 0, W, H);
     ctx.save(); ctx.translate(26, 44); ctx.scale(.9, .9);
-    drawChart(ctx, { shares: region.center, region }, { k: 1, compact: false, accent, noUser: true });
+    drawChart(ctx, { shares: region.center, region }, { k: 1, compact: false, accent, noUser: true, og: true });
     ctx.restore();
     const x = 780, w = 380; ctx.textAlign = "left"; ctx.textBaseline = "alphabetic";
     ctx.fillStyle = accent; ctx.font = `700 15px ${SANS}`; if (ctx.letterSpacing !== undefined) ctx.letterSpacing = "4px";
@@ -146,8 +156,10 @@
     ctx.fillStyle = "#fff"; ctx.font = `600 46px ${SERIF}`;
     let y = 185; for (const ln of wrap(ctx, region.name, w)) { ctx.fillText(ln, x, y); y += 54; }
     ctx.fillStyle = "#b9d0cd"; ctx.font = `500 25px ${SERIF}`; y += 8;
-    const sents = region.desc.split(/(?<=\.) /); let first = sents[0]; if (first.length < 90 && sents[1]) first += " " + sents[1];
-    for (const ln of wrap(ctx, first, w).slice(0, 7)) { ctx.fillText(ln, x, y); y += 33; }
+    const sents = region.desc.split(/(?<=\.) /); let text = sents[0], lines = wrap(ctx, text, w);
+    for (let i = 1; i < sents.length; i++) { const t = text + " " + sents[i], l = wrap(ctx, t, w); if (l.length > 6 || (lines.length >= 3 && text.length >= 90)) break; text = t; lines = l; }
+    if (lines.length > 7) lines = lines.slice(0, 7);
+    for (const ln of lines) { ctx.fillText(ln, x, y); y += 33; }
     ctx.fillStyle = accent; ctx.font = `700 17px ${SANS}`; ctx.fillText("Where do you land? Take the quiz \u2192", x, H - 54);
   };
 })();

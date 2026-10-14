@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=20261014d">
+  <link rel="stylesheet" href="css/style.css?v=20261014f">
 </head>
 <body>
 <div class="app">
@@ -81,25 +81,26 @@
         <summary>See all the zones</summary>
         <ul id="legend" class="legend"></ul>
       </details>
-      <div class="result-actions">
-        <a id="take" class="primary btn" href="./" hidden>Take it yourself &#10022;</a>
-        <button id="download" class="primary" type="button">Save my result &#10022;</button>
-        <button id="share" class="secondary" type="button">Share link</button>
-        <button id="retake" class="secondary" type="button">Do it again</button>
-      </div>
-      <div class="share-box" id="share-box" hidden>
-        <input id="share-url" type="text" readonly aria-label="Shareable link">
-        <button id="copy" class="secondary" type="button">Copy</button>
+      <a id="take" class="primary btn take" href="./" hidden>Take it yourself &#10022;</a>
+      <div id="owner-actions">
+        <div class="share-box" id="share-box">
+          <input id="share-url" type="text" readonly aria-label="Shareable link">
+          <button id="copy" class="primary" type="button">Copy link</button>
+        </div>
+        <div class="small-actions">
+          <button id="download" class="secondary small" type="button">Save image</button>
+          <button id="retake" class="secondary small" type="button">Do it again</button>
+        </div>
       </div>
       <p class="save-note" id="save-note" aria-live="polite"></p>
     </div>
   </section>
 
 </div>
-<script src="js/questions.js?v=20261014d"></script>
-<script src="js/regions.js?v=20261014d"></script>
-<script src="js/scoring.js?v=20261014d"></script>
-<script src="js/chart.js?v=20261014d"></script>
-<script src="js/main.js?v=20261014d"></script>
+<script src="js/questions.js?v=20261014f"></script>
+<script src="js/regions.js?v=20261014f"></script>
+<script src="js/scoring.js?v=20261014f"></script>
+<script src="js/chart.js?v=20261014f"></script>
+<script src="js/main.js?v=20261014f"></script>
 </body>
 </html>
