@@ -18,6 +18,11 @@ h1,h2,h3 { font-family:Fraunces,Georgia,serif; font-weight:600; margin:0; }
 .intro { max-width:570px; margin:auto; color:var(--muted); line-height:1.7; font-size:15px; }
 
 .card { background:linear-gradient(145deg,rgba(190,255,245,.07),rgba(190,255,245,.02)); border:1px solid var(--border); box-shadow:0 25px 80px rgba(0,0,0,.4); border-radius:20px; -webkit-backdrop-filter:blur(14px); backdrop-filter:blur(14px); }
+.defs { max-width:520px; margin:0 auto 22px; display:grid; gap:10px; }
+.defs div { display:grid; grid-template-columns:92px 1fr; gap:12px; align-items:baseline; font-size:14px; line-height:1.45; color:var(--muted); }
+.defs dt { font-size:11px; letter-spacing:.14em; text-transform:uppercase; font-weight:800; color:var(--accent); }
+.defs dd { margin:0; }
+.defs em { color:var(--text); font-style:normal; font-weight:600; }
 .setup { max-width:520px; margin:auto; padding:28px; }
 .setup label,.setup-label { display:block; font-size:12px; text-transform:uppercase; letter-spacing:.12em; font-weight:700; margin-bottom:10px; }
 .setup input { width:100%; padding:15px 16px; border-radius:14px; border:1px solid var(--border); background:#08191e; color:var(--text); outline:none; margin-bottom:24px; font-size:16px; }

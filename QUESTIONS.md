@@ -29,8 +29,8 @@ Weights are [Romance, Sexuality, Friendship], 0 to 1. Answers display shortest t
 
 ## 4. A close friend proposes adding benefits to your friendship. You say…
 
+- “Only if I could fall for you.”  `[1, 0.6, 0.3]`
 - “No thanks. The friendship is the whole point.”  `[0, 0, 1]`
-- “Only if it could turn into something romantic.”  `[1, 0.6, 0.3]`
 - “Yes please. Fun in bed plus my favourite person? Perfect.”  `[0, 1, 1]`
 - “Yes, as long as my other partners know and are cool with it.”  `[0.5, 1, 0.9]`
 - “I'd rather keep sex with people I'm not friends with. Cleaner.”  `[0, 1, 0]`
@@ -39,7 +39,7 @@ Weights are [Romance, Sexuality, Friendship], 0 to 1. Answers display shortest t
 
 - Not part of my life, and I'm happy that way  `[0.6, 0, 0.8]`
 - Not really my thing. I connect in other ways  `[0.3, 0, 1]`
-- Best once there's real romantic potential  `[1, 0.5, 0]`
+- Best once I'm falling for them  `[1, 0.5, 0]`
 - Fun with someone I like and trust  `[0, 1, 0.7]`
 - Part of a healthy mix. My partner(s) and I each have our own adventures  `[0.5, 1, 0.3]`
 - Great. Pleasure without the paperwork  `[0, 1, 0]`
@@ -205,4 +205,13 @@ Weights are [Romance, Sexuality, Friendship], 0 to 1. Answers display shortest t
 - Be honest about my needs and what we could negotiate  `[0.4, 1, 0.4]`
 - Be happy for them. I'm happy with closeness without sex too  `[0.7, 0, 1]`
 - Be glad for the closeness, and seek sex elsewhere if we both agree  `[0.6, 1, 0.6]`
+
+## 26. What's the real “glue” in your closest bond?
+
+- Desire: we can't keep our hands off each other  `[0, 1, 0]`
+- Trust: they'd get my keys, my secrets and my phone password  `[0.3, 0.2, 1]`
+- Play: banter, inside jokes and being total goofballs together  `[0, 0.3, 1]`
+- Ease: I can be fully myself and we never run out of things to say  `[0, 0, 1]`
+- Butterflies: that giddy, can't-stop-thinking-about-you, in-love feeling  `[1, 0.2, 0]`
+- Devotion: choosing each other, building a life, being each other's person  `[1, 0, 0.4]`
 
