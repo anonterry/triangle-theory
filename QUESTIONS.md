@@ -1,6 +1,6 @@
 # Triangle Theory: question bank
 
-Weights are [Romance, Sexuality, Friendship], 0 to 1. Answers display shortest to longest. Edit js/questions.js to change them.
+Weights are [Romance, Sexuality, Friendship], 0 to 1. Answers display shortest to longest, except questions marked (scale), which keep their order. Edit js/questions.js to change them.
 
 ## 1. Friday night, your phone buzzes. Which text makes you drop everything?
 
@@ -118,6 +118,7 @@ Weights are [Romance, Sexuality, Friendship], 0 to 1. Answers display shortest t
 - Loving. It's how I show I care  `[1, 0.2, 0.4]`
 - Like planning a road trip with a friend  `[0, 0.3, 1]`
 - Essential. Good agreements are what make non-monogamy work  `[0.5, 0.5, 0.8]`
+- Something I do all the time, even mid-scene, and I love it  `[0.3, 0.8, 0.6]`
 
 ## 15. Pick a weekend.
 
@@ -133,20 +134,22 @@ Weights are [Romance, Sexuality, Friendship], 0 to 1. Answers display shortest t
 - A handwritten letter about why they love me  `[1, 0, 0]`
 - Something thoughtful that proves they really know me  `[0.3, 0, 1]`
 
-## 17. In bed, what matters most?
+## 17. How much sex would your dream week include? (scale)
 
-- Mind-blowing physical chemistry  `[0, 1, 0]`
-- Feeling emotionally safe and adored  `[1, 0.4, 0]`
-- Laughing together, zero performance pressure  `[0, 0.4, 1]`
-- Honestly I could skip it; closeness matters more  `[0.6, 0, 0.8]`
+- None, and that's perfect  `[0.5, 0, 0.8]`
+- A little, with someone I feel close to  `[0.8, 0.4, 0.5]`
+- Regularly. A few good nights  `[0.4, 0.8, 0.3]`
+- Most days, with one partner or several  `[0.4, 1, 0.3]`
+- All the time. Every chance I get  `[0, 1, 0]`
 
-## 18. At a party, you go home with…
+## 18. What turns you on most?
 
-- My partner, hand in hand  `[1, 0.2, 0]`
-- My friends, same as I arrived  `[0, 0, 1]`
-- The person I couldn't stop talking to  `[0.5, 0.2, 1]`
-- Whoever I've been flirting with all night  `[0, 1, 0]`
-- Maybe more than one person, if everyone's into it  `[0, 1, 0.4]`
+- A brain I can't stop talking to  `[0.4, 0.7, 0.7]`
+- Trust. Someone I'd tell anything  `[0.6, 0.5, 1]`
+- Someone who knows exactly what I like  `[0.7, 1, 0.2]`
+- Novelty: new people, new places, new tricks  `[0, 1, 0.3]`
+- Being desired: the look that says they want me  `[0.2, 1, 0]`
+- Honestly, not much. Desire isn't a big part of my life  `[0.5, 0, 0.8]`
 
 ## 19. Your love language is…
 
@@ -174,6 +177,8 @@ Weights are [Romance, Sexuality, Friendship], 0 to 1. Answers display shortest t
 
 - The first “I love you”  `[1, 0, 0]`
 - Watching two people I love become friends  `[0.5, 0.2, 1]`
+- Hearing someone I love glow about a new date  `[0.5, 0.7, 0.5]`
+- The first time we all end up in the same bed  `[0.2, 1, 0.6]`
 - The first time we laugh so hard we can't breathe  `[0, 0, 1]`
 - The first time we try something new and a little wicked  `[0.3, 1, 0.5]`
 - The first time we really can't keep our hands off each other  `[0, 1, 0]`

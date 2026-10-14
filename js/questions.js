@@ -90,7 +90,8 @@ window.QUESTIONS = [
     ["Sexy. A clear yes is hot", [0, 1, .3]],
     ["Loving. It's how I show I care", [1, .2, .4]],
     ["Like planning a road trip with a friend", [0, .3, 1]],
-    ["Essential. Good agreements are what make non-monogamy work", [.5, .5, .8]] ]},
+    ["Essential. Good agreements are what make non-monogamy work", [.5, .5, .8]],
+    ["Something I do all the time, even mid-scene, and I love it", [.3, .8, .6]] ]},
   { q: "Pick a weekend.", a: [
     ["A cabin, a hot tub, and nobody else for 48 hours", [1, 1, 0]],
     ["A kink convention: workshops by day, afterparty by night", [0, 1, .6]],
@@ -101,17 +102,19 @@ window.QUESTIONS = [
     ["A handwritten letter about why they love me", [1, 0, 0]],
     ["Lingerie or a toy, wrapped with a bow", [0, 1, 0]],
     ["Something thoughtful that proves they really know me", [.3, 0, 1]] ]},
-  { q: "In bed, what matters most?", a: [
-    ["Mind-blowing physical chemistry", [0, 1, 0]],
-    ["Feeling emotionally safe and adored", [1, .4, 0]],
-    ["Laughing together, zero performance pressure", [0, .4, 1]],
-    ["Honestly I could skip it; closeness matters more", [.6, 0, .8]] ]},
-  { q: "At a party, you go home with…", a: [
-    ["Whoever I've been flirting with all night", [0, 1, 0]],
-    ["The person I couldn't stop talking to", [.5, .2, 1]],
-    ["My partner, hand in hand", [1, .2, 0]],
-    ["My friends, same as I arrived", [0, 0, 1]],
-    ["Maybe more than one person, if everyone's into it", [0, 1, .4]] ]},
+  { q: "How much sex would your dream week include?", keep: true, a: [
+    ["None, and that's perfect", [.5, 0, .8]],
+    ["A little, with someone I feel close to", [.8, .4, .5]],
+    ["Regularly. A few good nights", [.4, .8, .3]],
+    ["Most days, with one partner or several", [.4, 1, .3]],
+    ["All the time. Every chance I get", [0, 1, 0]] ]},
+  { q: "What turns you on most?", a: [
+    ["Being desired: the look that says they want me", [.2, 1, 0]],
+    ["A brain I can't stop talking to", [.4, .7, .7]],
+    ["Someone who knows exactly what I like", [.7, 1, .2]],
+    ["Trust. Someone I'd tell anything", [.6, .5, 1]],
+    ["Novelty: new people, new places, new tricks", [0, 1, .3]],
+    ["Honestly, not much. Desire isn't a big part of my life", [.5, 0, .8]] ]},
   { q: "Your love language is…", a: [
     ["Words and devotion", [1, 0, 0]],
     ["Touch, skin, and a lot of it", [0, 1, .3]],
@@ -133,7 +136,9 @@ window.QUESTIONS = [
     ["The first time we really can't keep our hands off each other", [0, 1, 0]],
     ["The first time we laugh so hard we can't breathe", [0, 0, 1]],
     ["The first time we try something new and a little wicked", [.3, 1, .5]],
-    ["Watching two people I love become friends", [.5, .2, 1]] ]},
+    ["Watching two people I love become friends", [.5, .2, 1]],
+    ["Hearing someone I love glow about a new date", [.5, .7, .5]],
+    ["The first time we all end up in the same bed", [.2, 1, .6]] ]},
   { q: "Your texting habits with someone you're into are…", a: [
     ["Sweet good-mornings and good-nights", [1, 0, .3]],
     ["Flirty pics and filthy promises", [0, 1, 0]],

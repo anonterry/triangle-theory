@@ -33,7 +33,7 @@
   function start() {
     name = $("name").value.trim();
     // answers display shortest to longest
-    order = Q.map(q => q.a.map((_, i) => i).sort((x, y) => q.a[x][0].length - q.a[y][0].length || x - y)); answers = new Array(Q.length).fill(null); idx = 0;
+    order = Q.map(q => q.a.map((_, i) => i).sort((x, y) => q.keep ? x - y : q.a[x][0].length - q.a[y][0].length || x - y)); answers = new Array(Q.length).fill(null); idx = 0;
     show("quiz"); render(); updateDot();
   }
   function render() {
