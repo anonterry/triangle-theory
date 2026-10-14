@@ -2,40 +2,93 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#080609">
   <title>Triangle Theory</title>
   <meta name="description" content="A quiz that maps how romance, sexuality and friendship fit together for you.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <main>
-    <section id="intro">
-      <h1>Triangle Theory</h1>
-      <p class="lead">Relationships are built from three ingredients: <strong>romance</strong>, <strong>sexuality</strong> and <strong>friendship</strong>. Everyone blends them differently. Answer <span id="count">23</span> quick questions to see where you land on the triangle.</p>
-      <p class="small">Just for fun and self-reflection. Not a clinical tool. Nothing you answer leaves your browser.</p>
-      <button id="start" class="primary" type="button">Start the quiz</button>
-    </section>
+<div class="app">
 
-    <section id="quiz" hidden>
-      <div class="progress"><div id="progress-bar"></div></div>
-      <p id="progress-text" class="small"></p>
-      <h2 id="question"></h2>
-      <div id="answers"></div>
-      <button id="back" type="button" class="link">&larr; Back</button>
-    </section>
+  <section id="intro" class="screen active">
+    <div class="hero">
+      <div class="eyebrow">A VERY HONEST QUIZ</div>
+      <h1>TRIANGLE<br class="only-mobile"> THEORY</h1>
+      <p class="tagline">Where do you land between romance, sexuality and friendship?</p>
+      <p class="intro">Answer <span id="count">23</span> quick questions and we'll plot you on the triangle. It's for fun and self-reflection, not a diagnosis. Nothing you answer leaves your device.</p>
+    </div>
+    <div class="card setup">
+      <label for="name">What should we call you?</label>
+      <input id="name" type="text" placeholder="Name or nickname (optional)" maxlength="24" autocomplete="off" autocapitalize="words">
+      <div class="setup-label" id="color-label">Pick your colour</div>
+      <div class="colors" role="radiogroup" aria-labelledby="color-label" id="colors"></div>
+      <button id="start" class="primary" type="button">Start the quiz &#10022;</button>
+    </div>
+  </section>
 
-    <section id="result" hidden>
-      <canvas id="card" role="img"></canvas>
-      <div class="actions">
-        <button id="download" class="primary" type="button">Save image</button>
-        <button id="share" type="button">Share</button>
-        <button id="retake" type="button">Retake quiz</button>
+  <section id="quiz" class="screen">
+    <div class="quiz-head">
+      <h2>Triangle Theory</h2>
+      <div class="mini-level"><span id="progress-text">1 / 23</span></div>
+    </div>
+    <div class="quiz-layout">
+      <div class="tri-column">
+        <svg id="mini" viewBox="0 0 300 270" role="img" aria-label="Your live position on the triangle">
+          <polygon points="150,24 22,246 278,246" class="tri-fill"/>
+          <g class="tri-grid" id="mini-grid"></g>
+          <polygon points="150,24 22,246 278,246" class="tri-edge"/>
+          <g id="mini-dot" class="tri-dot"><circle r="16" class="halo"/><circle r="8"/></g>
+          <text x="150" y="14" text-anchor="middle">ROMANCE</text>
+          <text x="22" y="264" text-anchor="start">SEXUALITY</text>
+          <text x="278" y="264" text-anchor="end">FRIENDSHIP</text>
+        </svg>
+        <p class="hint">Your position updates as you answer.</p>
       </div>
-    </section>
-  </main>
-  <script src="js/questions.js"></script>
-  <script src="js/regions.js"></script>
-  <script src="js/chart.js"></script>
-  <script src="js/main.js"></script>
+      <div class="question-column">
+        <div class="progress-track"><div id="progress-bar" class="progress-bar"></div></div>
+        <div class="card question-card">
+          <div class="question-number" id="qnum">QUESTION 1</div>
+          <h3 id="question"></h3>
+          <div id="answers" class="answers"></div>
+          <button id="back" type="button" class="link">&larr; Back</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="result" class="screen">
+    <div class="card results">
+      <div class="eyebrow" id="r-eyebrow">YOUR RESULT</div>
+      <div class="result-layout">
+        <div class="chart-wrap"><canvas id="chart" role="img"></canvas></div>
+        <div class="result-copy">
+          <div class="type-kicker">YOUR ZONE</div>
+          <h3 id="r-name"></h3>
+          <blockquote id="r-desc"></blockquote>
+          <div class="traits" id="traits"></div>
+        </div>
+      </div>
+      <details class="legend-box">
+        <summary>See all the zones</summary>
+        <ul id="legend" class="legend"></ul>
+      </details>
+      <div class="result-actions">
+        <button id="download" class="primary" type="button">Save my result &#10022;</button>
+        <button id="share" class="secondary" type="button">Share</button>
+        <button id="retake" class="secondary" type="button">Do it again</button>
+      </div>
+      <p class="save-note" id="save-note" aria-live="polite"></p>
+    </div>
+  </section>
+
+</div>
+<script src="js/questions.js"></script>
+<script src="js/regions.js"></script>
+<script src="js/chart.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>
