@@ -1,6 +1,6 @@
 # Triangle Theory: question bank
 
-Weights are [Romance, Sexuality, Friendship], 0 to 1. Answers display shortest to longest, except questions marked (scale), which keep their order. Edit js/questions.js to change them.
+Weights are [Romance, Sexuality, Friendship], 0 to 1. Answers display shortest to longest, except questions marked (scale), which run lowest to highest in the order shown. Edit js/questions.js to change them.
 
 ## 1. Friday night, your phone buzzes. Which text makes you drop everything?
 
@@ -19,13 +19,13 @@ Weights are [Romance, Sexuality, Friendship], 0 to 1. Answers display shortest t
 - A table for three: me and two people I'm into, with chemistry everywhere  `[0.3, 1, 0.6]`
 - A slow build: eye contact, a hand on my back, a kiss that means something  `[1, 0.6, 0]`
 
-## 3. Your partner's other partner invites you out for drinks. You…
+## 3. Your partner's other partner invites you out for drinks. You… (scale)
 
 - Pass. I'd rather keep our relationships separate  `[0.6, 0, 0]`
 - Say yes, as long as it stays friendly and low-key  `[0.2, 0, 0.8]`
+- Go, mostly to make sure my partner is happy and well cared for  `[1, 0, 0.4]`
 - Say yes right away. Their people could be my people  `[0.4, 0.2, 1]`
 - Say yes, and wonder out loud whether sparks might fly  `[0, 1, 0.5]`
-- Go, mostly to make sure my partner is happy and well cared for  `[1, 0, 0.4]`
 
 ## 4. A close friend proposes adding benefits to your friendship. You say…
 
@@ -35,14 +35,14 @@ Weights are [Romance, Sexuality, Friendship], 0 to 1. Answers display shortest t
 - “Yes, as long as my other partners know and are cool with it.”  `[0.5, 1, 0.9]`
 - “I'd rather keep sex with people I'm not friends with. Cleaner.”  `[0, 1, 0]`
 
-## 5. Casual sex (hookups, one-night stands) is…
+## 5. Casual sex (hookups, one-night stands) is… (scale)
 
-- Fun with someone I like and trust  `[0, 1, 0.7]`
-- Great. Pleasure without the paperwork  `[0, 1, 0]`
-- Best once there's real romantic potential  `[1, 0.5, 0]`
 - Not part of my life, and I'm happy that way  `[0.6, 0, 0.8]`
 - Not really my thing. I connect in other ways  `[0.3, 0, 1]`
+- Best once there's real romantic potential  `[1, 0.5, 0]`
+- Fun with someone I like and trust  `[0, 1, 0.7]`
 - Part of a healthy mix. My partner(s) and I each have our own adventures  `[0.5, 1, 0.3]`
+- Great. Pleasure without the paperwork  `[0, 1, 0]`
 
 ## 6. A swingers or play-party invitation lands in your inbox. You…
 
@@ -52,14 +52,14 @@ Weights are [Romance, Sexuality, Friendship], 0 to 1. Answers display shortest t
 - Go with friends to hang out, chat and people-watch  `[0, 0.4, 1]`
 - Go with a trusted partner and keep our bond the focus  `[1, 1, 0]`
 
-## 7. Your ideal relationship setup is…
+## 7. Your ideal relationship setup is… (scale)
 
-- A web of friends and no partner needed  `[0, 0, 1]`
 - One devoted partner who is lover, best friend and home  `[1, 0.7, 0.7]`
 - A devoted couple, open to playing with others together  `[0.9, 1, 0.2]`
 - One primary partner, plus other relationships alongside  `[0.8, 0.8, 0.3]`
 - Several loving relationships, each its own thing, no hierarchy  `[0.7, 0.8, 0.6]`
 - Autonomy first: solo poly or relationship anarchy, connection by choice  `[0.3, 0.7, 1]`
+- A web of friends and no partner needed  `[0, 0, 1]`
 
 ## 8. Someone slips you their number with a note about exactly what they'd do to you.
 
@@ -78,12 +78,12 @@ Weights are [Romance, Sexuality, Friendship], 0 to 1. Answers display shortest t
 - Exploring each other's kinks with someone I deeply trust  `[0.6, 1, 0.3]`
 - A threesome (or more) with people I adore, everyone eager  `[0.6, 1, 0.5]`
 
-## 10. Kink, fetish and power play are…
+## 10. Kink, fetish and power play are… (scale)
 
 - Not really my thing  `[0.3, 0, 0.3]`
-- A core part of my sex life  `[0, 1, 0]`
-- Something to explore with someone I trust  `[0.6, 0.9, 0.2]`
 - A great topic for friends to swap stories about  `[0, 0.3, 1]`
+- Something to explore with someone I trust  `[0.6, 0.9, 0.2]`
+- A core part of my sex life  `[0, 1, 0]`
 
 ## 11. Your flirting style is…
 
@@ -93,24 +93,24 @@ Weights are [Romance, Sexuality, Friendship], 0 to 1. Answers display shortest t
 - Friend first. The rest happens or it doesn't  `[0.2, 0, 1]`
 - Thoughtful compliments and old-fashioned charm  `[1, 0.2, 0]`
 
-## 12. Your partner has a hot date with someone else, with everyone's consent. You feel…
+## 12. Your partner has a hot date with someone else, with everyone's consent. You feel… (scale)
 
-- Thrilled. Tell me everything  `[0.3, 1, 0.3]`
-- A little jealous but secure. We'd talk first  `[1, 0.3, 0.3]`
-- Curious. I'd want to meet them, and maybe join in  `[0.4, 1, 0.6]`
-- Totally fine. We're friends first, partners second  `[0.4, 0.3, 1]`
 - That's not our deal. We're each other's one and only  `[1, 0, 0]`
+- A little jealous but secure. We'd talk first  `[1, 0.3, 0.3]`
 - Happy as long as everyone's safe. I don't need the details  `[0.5, 0.3, 0.2]`
+- Totally fine. We're friends first, partners second  `[0.4, 0.3, 1]`
+- Curious. I'd want to meet them, and maybe join in  `[0.4, 1, 0.6]`
+- Thrilled. Tell me everything  `[0.3, 1, 0.3]`
 
-## 13. How do you feel about being “someone's person”?
+## 13. How do you feel about being “someone's person”? (scale)
 
 - It's what I want most. One person, all in  `[1, 0, 0]`
 - Two of us, plus a third we both adore: a triad  `[0.9, 0.9, 0.4]`
 - I want a primary partner, but I need freedom too  `[0.7, 0.7, 0.2]`
 - I want several partners and love each one deeply  `[0.9, 0.8, 0.5]`
-- I'm happiest solo, with lovers and friends by choice  `[0.1, 0.6, 0.9]`
-- I'd rather have many warm connections than one big one  `[0, 0.4, 1]`
 - I'd rather enjoy people freely, without labels or hierarchy  `[0, 1, 0.3]`
+- I'd rather have many warm connections than one big one  `[0, 0.4, 1]`
+- I'm happiest solo, with lovers and friends by choice  `[0.1, 0.6, 0.9]`
 
 ## 14. Talking through boundaries and consent before play feels…
 
