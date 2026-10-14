@@ -25,12 +25,8 @@
     let h = ""; for (const t of [.25, .5, .75]) for (const [a, b] of [[mpt(t, 1 - t, 0), mpt(t, 0, 1 - t)], [mpt(1 - t, t, 0), mpt(0, t, 1 - t)], [mpt(1 - t, 0, t), mpt(0, 1 - t, t)]]) h += `<line x1="${a[0]}" y1="${a[1]}" x2="${b[0]}" y2="${b[1]}"/>`;
     $("mini-grid").innerHTML = h;
   })();
-  function sums(upTo) {
-    const s = [0, 0, 0]; for (let i = 0; i < upTo; i++) if (answers[i] != null) { const w = Q[i].a[answers[i]][1]; for (let k = 0; k < 3; k++) s[k] += w[k]; }
-    return s;
-  }
   function updateDot() {
-    const s = sums(Q.length), t = s[0] + s[1] + s[2], sh = t ? s.map(v => v / t) : [1 / 3, 1 / 3, 1 / 3];
+    const sh = window.computeShares(answers);
     const [x, y] = mpt(...sh); $("mini-dot").style.transform = `translate(${x}px,${y}px)`; $("mini-dot").setAttribute("transform", `translate(${x},${y})`);
   }
 
@@ -59,7 +55,7 @@
     $("back").disabled = idx === 0;
   }
   function finish() {
-    const sum = sums(Q.length), total = (sum[0] + sum[1] + sum[2]) || 1, shares = sum.map(v => v / total);
+    const shares = window.computeShares(answers);
     const pct = shares.map(v => Math.round(v * 100)); pct[2] += 100 - pct[0] - pct[1] - pct[2];
     result = { shares, percent: pct, region: window.classify(shares) };
     $("r-eyebrow").textContent = name ? `${name.toUpperCase()}'S RESULT` : "YOUR RESULT";
