@@ -1,7 +1,7 @@
 // Triangle chart renderer. drawChart works at a 820x600 logical size scaled by k;
 // "compact" mode (small screens) drops the crowded labels. renderCard builds the full saved image.
 (function () {
-  const SERIF = '"Cormorant Garamond", Georgia, serif', SANS = 'Montserrat, system-ui, sans-serif';
+  const SERIF = 'Fraunces, Georgia, serif', SANS = '"DM Sans", system-ui, sans-serif';
   const CW = 900, BOX = { x: 40, y: 150, w: 820, h: 600 };
   const V = { R: [410, 40], S: [110, 560], F: [710, 560] };
   const pt = (r, s, f) => [r * V.R[0] + s * V.S[0] + f * V.F[0], r * V.R[1] + s * V.S[1] + f * V.F[1]];
@@ -20,7 +20,7 @@
   }
 
   function drawChart(ctx, result, o) {
-    const k = o.k || 1, compact = !!o.compact, accent = o.accent || "#ff3f8e";
+    const k = o.k || 1, compact = !!o.compact, accent = o.accent || "#ffb347";
     const F = (px, wt) => `${wt || 500} ${px / k}px ${SANS}`;
     const regions = window.REGIONS;
     const off = document.createElement("canvas"); off.width = BOX.w; off.height = BOX.h;
@@ -48,7 +48,7 @@
     const edge = (a, b, col) => { ctx.strokeStyle = col; ctx.beginPath(); ctx.moveTo(...a); ctx.lineTo(...b); ctx.stroke(); };
     edge(V.R, V.S, "#c25ae0"); edge(V.R, V.F, "#2fd272"); edge(V.S, V.F, "#6b6bf2");
 
-    ctx.fillStyle = "#cdbfca"; ctx.font = F(compact ? 11 : 13);
+    ctx.fillStyle = "#b9d0cd"; ctx.font = F(compact ? 11 : 13);
     const step = compact ? 2 : 1;
     for (let n = 0; n <= 10; n += step) {
       const t = n / 10, s = String(n * 10);
@@ -66,7 +66,7 @@
         const lines = splitName(r.name), [x, y] = cxy[i];
         lines.forEach((ln, j) => {
           const yy = y + (j - (lines.length - 1) / 2) * 14;
-          ctx.lineWidth = 3; ctx.strokeStyle = "rgba(8,6,9,.8)"; ctx.strokeText(ln, x, yy);
+          ctx.lineWidth = 3; ctx.strokeStyle = "rgba(6,19,23,.85)"; ctx.strokeText(ln, x, yy);
           ctx.fillStyle = `rgb(${light(r.color, .55)})`; ctx.fillText(ln, x, yy);
         });
       });
@@ -87,7 +87,7 @@
     ctx.fillStyle = accent; ctx.strokeStyle = "#fff"; ctx.lineWidth = 3 / k;
     ctx.beginPath(); ctx.arc(ux, uy, (compact ? 8 : 11) / k, 0, 7); ctx.fill(); ctx.stroke();
     ctx.font = F(compact ? 12 : 14, 800); ctx.textAlign = "center"; ctx.textBaseline = "bottom";
-    ctx.lineWidth = 4 / k; ctx.strokeStyle = "rgba(8,6,9,.9)"; ctx.strokeText("YOU", ux, uy - 14 / k);
+    ctx.lineWidth = 4 / k; ctx.strokeStyle = "rgba(6,19,23,.92)"; ctx.strokeText("YOU", ux, uy - 14 / k);
     ctx.fillStyle = "#fff"; ctx.fillText("YOU", ux, uy - 14 / k);
   }
 
@@ -108,22 +108,22 @@
     const H = BOX.y + BOX.h + 50 + 70 + 40 + lines.length * 36 + 70;
     canvas.width = CW * SCALE; canvas.height = H * SCALE;
     const ctx = canvas.getContext("2d"); ctx.scale(SCALE, SCALE);
-    ctx.fillStyle = "#080609"; ctx.fillRect(0, 0, CW, H);
+    ctx.fillStyle = "#061317"; ctx.fillRect(0, 0, CW, H);
     const bg = ctx.createRadialGradient(180, 0, 0, 180, 0, 520); bg.addColorStop(0, accent + "33"); bg.addColorStop(1, accent + "00");
     ctx.fillStyle = bg; ctx.fillRect(0, 0, CW, H);
     ctx.textAlign = "center"; ctx.textBaseline = "alphabetic";
     ctx.fillStyle = accent; ctx.font = `700 15px ${SANS}`;
     if (ctx.letterSpacing !== undefined) ctx.letterSpacing = "4px";
     ctx.fillText(name ? (name.toUpperCase() + "'S RESULT") : "YOUR RESULT", CW / 2 + 2, 58);
-    ctx.fillStyle = "#fff"; ctx.font = `700 64px ${SERIF}`; if (ctx.letterSpacing !== undefined) ctx.letterSpacing = "3px";
-    ctx.fillText("TRIANGLE THEORY", CW / 2 + 2, 118);
+    ctx.fillStyle = "#fff"; ctx.font = `600 66px ${SERIF}`; if (ctx.letterSpacing !== undefined) ctx.letterSpacing = "-1px";
+    ctx.fillText("Triangle Theory", CW / 2, 120);
     if (ctx.letterSpacing !== undefined) ctx.letterSpacing = "0px";
     ctx.save(); ctx.translate(BOX.x, BOX.y); drawChart(ctx, result, { k: 1, compact: false, accent }); ctx.restore();
     let y = BOX.y + BOX.h + 80;
-    ctx.fillStyle = "#fff"; ctx.font = `700 54px ${SERIF}`; ctx.fillText(result.region.name, CW / 2, y);
-    y += 40; ctx.fillStyle = "#b8aab5"; ctx.font = `600 16px ${SANS}`;
+    ctx.fillStyle = "#fff"; ctx.font = `600 54px ${SERIF}`; ctx.fillText(result.region.name, CW / 2, y);
+    y += 40; ctx.fillStyle = "#9db5b3"; ctx.font = `600 16px ${SANS}`;
     const p = result.percent; ctx.fillText(`Romance ${p[0]}%   ·   Sexuality ${p[1]}%   ·   Friendship ${p[2]}%`, CW / 2, y);
-    y += 50; ctx.fillStyle = "#e6d9e2"; ctx.font = `500 26px ${SERIF}`; ctx.textAlign = "left";
+    y += 50; ctx.fillStyle = "#d4e6e3"; ctx.font = `500 26px ${SERIF}`; ctx.textAlign = "left";
     for (const ln of lines) { ctx.fillText(ln, pad, y); y += 36; }
     ctx.fillStyle = "#7d707a"; ctx.font = `500 14px ${SANS}`; ctx.textAlign = "center";
     ctx.fillText("anonterry.github.io/triangle-theory", CW / 2, H - 28);

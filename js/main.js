@@ -1,18 +1,18 @@
 (function () {
   const Q = window.QUESTIONS, $ = id => document.getElementById(id);
-  const COLORS = [["#ff3f8e", "255,63,142", "Pink"], ["#b44cff", "180,76,255", "Violet"], ["#22d3c5", "34,211,197", "Teal"], ["#ffb347", "255,179,71", "Gold"]];
+  const COLORS = [["#ffb347", "255,179,71", "#ff8a3d", "#1a1203", "Amber"], ["#2ee6c8", "46,230,200", "#19b8d6", "#03231f", "Aqua"], ["#ff7a6b", "255,122,107", "#ff4f6d", "#2a0a08", "Coral"], ["#a78bfa", "167,139,250", "#7c6cf5", "#12082e", "Lavender"]];
   let order, answers, idx, accent = COLORS[0][0], name = "", result = null;
 
   const shuffle = a => { a = a.slice(); for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
   function show(id) { for (const s of ["intro", "quiz", "result"]) $(s).classList.toggle("active", s === id); window.scrollTo(0, 0); }
 
   // colour picker
-  COLORS.forEach(([hex, rgb, label], i) => {
+  COLORS.forEach(([hex, rgb, hex2, on, label], i) => {
     const b = document.createElement("button");
     b.type = "button"; b.className = "color" + (i ? "" : " active"); b.style.setProperty("--swatch", hex);
     b.setAttribute("role", "radio"); b.setAttribute("aria-label", label); b.setAttribute("aria-checked", i ? "false" : "true");
     b.onclick = () => {
-      accent = hex; document.documentElement.style.setProperty("--accent", hex); document.documentElement.style.setProperty("--accent-rgb", rgb);
+      accent = hex; document.documentElement.style.setProperty("--accent", hex); document.documentElement.style.setProperty("--accent-rgb", rgb); document.documentElement.style.setProperty("--accent2", hex2); document.documentElement.style.setProperty("--on", on);
       [...$("colors").children].forEach(c => { c.classList.toggle("active", c === b); c.setAttribute("aria-checked", c === b); });
     };
     $("colors").appendChild(b);
