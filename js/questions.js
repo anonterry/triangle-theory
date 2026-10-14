@@ -38,7 +38,7 @@ window.QUESTIONS = [
     ["Great. Pleasure without the paperwork", [0, 1, 0]] ]},
   { q: "A swingers or play-party invitation lands in your inbox. You…", a: [
     ["RSVP before finishing the message", [0, 1, 0]],
-    ["Go with a trusted partner and keep our bond the focus", [1, 1, 0]],
+    ["Go with a trusted partner", [1, 1, 0]],
     ["Go solo and meet new lovers there", [0, 1, 0.4]],
     ["Go with friends to hang out, chat and people-watch", [0, 0.4, 1]],
     ["Pass. I prefer intimacy one-on-one", [1, 0, 0.4]] ]},
@@ -122,7 +122,7 @@ window.QUESTIONS = [
     ["Touch, skin, and a lot of it", [0, 1, 0.3]],
     ["Quality time and inside jokes", [0, 0, 1]],
     ["Acts of service, like cooking dinner together (naked optional)", [0.8, 0.5, 0.3]] ]},
-  { q: "You and a close friend both confess, a little drunk, that you've always found each other hot. Next move?", a: [
+  { q: "You and a close friend both confess that you've always found each other hot. Next move?", a: [
     ["Kiss them. Obviously", [0, 1, 0.5]],
     ["Laugh it off and order pizza", [0, 0, 1]],
     ["Take it slow and ask whether this could be real love", [1, 0.4, 0.3]],
@@ -132,7 +132,8 @@ window.QUESTIONS = [
     ["A place to explore desire out loud", [0, 1, 0.3]],
     ["A place to find my people", [0, 0.2, 1]],
     ["A place I might meet someone to fall for", [1, 0.3, 0.4]],
-    ["A place to meet others living non-monogamy openly", [0.3, 0.5, 1]] ]},
+    ["A place to meet others living non-monogamy openly", [0.3, 0.5, 1]],
+    ["Not much. They're not really my scene", [0.3, 0, 0.3]] ]},
   { q: "Which relationship moment would you hate to miss?", a: [
     ["The first “I love you”", [1, 0, 0]],
     ["The first time we really can't keep our hands off each other", [0, 1, 0]],

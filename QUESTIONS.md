@@ -46,11 +46,11 @@ Weights are [Romance, Sexuality, Friendship], 0 to 1. Answers display shortest t
 
 ## 6. A swingers or play-party invitation lands in your inbox. You…
 
+- Go with a trusted partner  `[1, 1, 0]`
 - RSVP before finishing the message  `[0, 1, 0]`
 - Go solo and meet new lovers there  `[0, 1, 0.4]`
 - Pass. I prefer intimacy one-on-one  `[1, 0, 0.4]`
 - Go with friends to hang out, chat and people-watch  `[0, 0.4, 1]`
-- Go with a trusted partner and keep our bond the focus  `[1, 1, 0]`
 
 ## 7. Your ideal relationship setup is… (scale)
 
@@ -158,7 +158,7 @@ Weights are [Romance, Sexuality, Friendship], 0 to 1. Answers display shortest t
 - Quality time and inside jokes  `[0, 0, 1]`
 - Acts of service, like cooking dinner together (naked optional)  `[0.8, 0.5, 0.3]`
 
-## 20. You and a close friend both confess, a little drunk, that you've always found each other hot. Next move?
+## 20. You and a close friend both confess that you've always found each other hot. Next move?
 
 - Kiss them. Obviously  `[0, 1, 0.5]`
 - Laugh it off and order pizza  `[0, 0, 1]`
@@ -170,6 +170,7 @@ Weights are [Romance, Sexuality, Friendship], 0 to 1. Answers display shortest t
 
 - A place to find my people  `[0, 0.2, 1]`
 - A place to explore desire out loud  `[0, 1, 0.3]`
+- Not much. They're not really my scene  `[0.3, 0, 0.3]`
 - A place I might meet someone to fall for  `[1, 0.3, 0.4]`
 - A place to meet others living non-monogamy openly  `[0.3, 0.5, 1]`
 
