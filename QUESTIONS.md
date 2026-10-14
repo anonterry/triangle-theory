@@ -1,119 +1,136 @@
 # Triangle Theory: question bank
 
-Weights are [Romance, Sexuality, Friendship], 0 to 1. Edit js/questions.js to change them.
+Weights are [Romance, Sexuality, Friendship], 0 to 1. Answers display shortest to longest. Edit js/questions.js to change them.
 
 ## 1. Friday night, your phone buzzes. Which text makes you drop everything?
 
 - “Come over. Wear nothing under the coat.”  `[0, 1, 0]`
-- “Can't stop thinking about you. See you tonight?”  `[1, 0, 0]`
 - “We're at the bar and we saved you a seat!”  `[0, 0, 1]`
+- “Bringing a friend who's into you too. Say yes?”  `[0, 1, 0.6]`
+- “Can't stop thinking about you. See you tonight?”  `[1, 0, 0]`
 - “Hotel is booked. Candles optional, handcuffs not.”  `[1, 1, 0]`
 
 ## 2. What makes a date feel hot to you?
 
-- A slow build: eye contact, a hand on my back, a kiss that means something  `[1, 0.6, 0]`
 - Obvious mutual lust and a short route to a bedroom  `[0, 1, 0]`
-- Laughing until my face hurts with someone who just gets me  `[0, 0.2, 1]`
 - A late-night walk and a secret I've never told anyone  `[1, 0, 0.7]`
+- Laughing until my face hurts with someone who just gets me  `[0, 0.2, 1]`
 - Dancing close, grinding on a dance floor, seeing where it goes  `[0, 1, 0.4]`
+- A table for three: me and two people I'm into, with chemistry everywhere  `[0.3, 1, 0.6]`
+- A slow build: eye contact, a hand on my back, a kiss that means something  `[1, 0.6, 0]`
 
-## 3. After really good sex, you most want…
+## 3. Your partner's other partner invites you out for drinks. You…
 
-- To whisper “I'm falling for you” into their neck  `[1, 0.2, 0]`
-- A snack, a laugh, and then round two  `[0, 0.8, 1]`
-- A hot shower and a friendly goodbye  `[0, 1, 0]`
-- To talk about what we want this to become  `[1, 0, 0.3]`
+- Pass. I'd rather keep our relationships separate  `[0.6, 0, 0]`
+- Say yes, as long as it stays friendly and low-key  `[0.2, 0, 0.8]`
+- Say yes right away. Their people could be my people  `[0.4, 0.2, 1]`
+- Say yes, and wonder out loud whether sparks might fly  `[0, 1, 0.5]`
+- Go, mostly to make sure my partner is happy and well cared for  `[1, 0, 0.4]`
 
 ## 4. A close friend proposes adding benefits to your friendship. You say…
 
-- “Yes please. Fun in bed plus my favourite person? Perfect.”  `[0, 1, 1]`
-- “Only if it could turn into something romantic.”  `[1, 0.6, 0.3]`
 - “No thanks. The friendship is the whole point.”  `[0, 0, 1]`
+- “Only if it could turn into something romantic.”  `[1, 0.6, 0.3]`
+- “Yes please. Fun in bed plus my favourite person? Perfect.”  `[0, 1, 1]`
+- “Yes, as long as my other partners know and are cool with it.”  `[0.5, 1, 0.9]`
 - “I'd rather keep sex with people I'm not friends with. Cleaner.”  `[0, 1, 0]`
 
 ## 5. Casual sex (hookups, one-night stands) is…
 
-- Great. Pleasure without the paperwork  `[0, 1, 0]`
 - Fun with someone I like and trust  `[0, 1, 0.7]`
+- Great. Pleasure without the paperwork  `[0, 1, 0]`
 - Best once there's real romantic potential  `[1, 0.5, 0]`
-- Not really my thing. I connect in other ways  `[0.3, 0, 1]`
 - Not part of my life, and I'm happy that way  `[0.6, 0, 0.8]`
+- Not really my thing. I connect in other ways  `[0.3, 0, 1]`
+- Part of a healthy mix. My partner(s) and I each have our own adventures  `[0.5, 1, 0.3]`
 
 ## 6. A swingers or play-party invitation lands in your inbox. You…
 
 - RSVP before finishing the message  `[0, 1, 0]`
-- Go with a trusted partner and keep our bond the focus  `[1, 1, 0]`
-- Go with friends to hang out, chat and people-watch  `[0, 0.4, 1]`
+- Go solo and meet new lovers there  `[0, 1, 0.4]`
 - Pass. I prefer intimacy one-on-one  `[1, 0, 0.4]`
+- Go with friends to hang out, chat and people-watch  `[0, 0.4, 1]`
+- Go with a trusted partner and keep our bond the focus  `[1, 1, 0]`
 
 ## 7. Your ideal relationship setup is…
 
-- One devoted partner who is lover, best friend and home  `[1, 0.7, 0.7]`
-- A devoted romantic partnership plus deep friendships  `[1, 0, 0.8]`
-- A romantic partner, plus adventures with others by mutual agreement  `[0.8, 1, 0]`
-- A few close lovers who are also close friends, no hierarchy  `[0.3, 1, 0.8]`
 - A web of friends and no partner needed  `[0, 0, 1]`
+- One devoted partner who is lover, best friend and home  `[1, 0.7, 0.7]`
+- A devoted couple, open to playing with others together  `[0.9, 1, 0.2]`
+- One primary partner, plus other relationships alongside  `[0.8, 0.8, 0.3]`
+- Several loving relationships, each its own thing, no hierarchy  `[0.7, 0.8, 0.6]`
+- Autonomy first: solo poly or relationship anarchy, connection by choice  `[0.3, 0.7, 1]`
 
 ## 8. Someone slips you their number with a note about exactly what they'd do to you.
 
 - I'm already typing back  `[0, 1, 0]`
 - Intriguing. Coffee first, then we'll see  `[0.6, 0.2, 0.8]`
-- I'm showing my friends and we're laughing about it  `[0, 0.2, 1]`
 - Flattering, but my heart is already taken  `[1, 0, 0]`
+- I'm showing my friends and we're laughing about it  `[0, 0.2, 1]`
+- Flattering! I'd mention it to my partner(s), then maybe text back  `[0.5, 0.7, 0.3]`
 
 ## 9. Pick a fantasy.
 
-- A slow, candle-lit night with someone who adores me  `[1, 0.7, 0]`
 - Being wanted by a stranger. No names, no strings  `[0, 1, 0]`
+- A slow, candle-lit night with someone who adores me  `[1, 0.7, 0]`
 - A game with my best friend that turns unexpectedly hot  `[0, 0.8, 1]`
 - A bonfire trip with my favourite people. No sex required  `[0, 0, 1]`
 - Exploring each other's kinks with someone I deeply trust  `[0.6, 1, 0.3]`
+- A threesome (or more) with people I adore, everyone eager  `[0.6, 1, 0.5]`
 
 ## 10. Kink, fetish and power play are…
 
-- A core part of my sex life  `[0, 1, 0]`
-- Something to explore with a trusted partner  `[0.6, 0.9, 0.2]`
-- A great topic for friends to swap stories about  `[0, 0.3, 1]`
 - Not really my thing  `[0.3, 0, 0.3]`
+- A core part of my sex life  `[0, 1, 0]`
+- Something to explore with someone I trust  `[0.6, 0.9, 0.2]`
+- A great topic for friends to swap stories about  `[0, 0.3, 1]`
 
 ## 11. Your flirting style is…
 
-- Teasing banter and lots of eye contact  `[0, 0.8, 0.7]`
-- Thoughtful compliments and old-fashioned charm  `[1, 0.2, 0]`
 - Direct: “I want you.”  `[0, 1, 0]`
+- Teasing banter and lots of eye contact  `[0, 0.8, 0.7]`
+- Openly, even with my partner(s) in the room  `[0.3, 1, 0.6]`
 - Friend first. The rest happens or it doesn't  `[0.2, 0, 1]`
+- Thoughtful compliments and old-fashioned charm  `[1, 0.2, 0]`
 
 ## 12. Your partner has a hot date with someone else, with everyone's consent. You feel…
 
 - Thrilled. Tell me everything  `[0.3, 1, 0.3]`
 - A little jealous but secure. We'd talk first  `[1, 0.3, 0.3]`
-- That's not our deal. We're each other's one and only  `[1, 0, 0]`
+- Curious. I'd want to meet them, and maybe join in  `[0.4, 1, 0.6]`
 - Totally fine. We're friends first, partners second  `[0.4, 0.3, 1]`
+- That's not our deal. We're each other's one and only  `[1, 0, 0]`
+- Happy as long as everyone's safe. I don't need the details  `[0.5, 0.3, 0.2]`
 
 ## 13. How do you feel about being “someone's person”?
 
-- It's what I want most in the world  `[1, 0, 0]`
-- I'd rather have many warm connections than one big one  `[0, 0.4, 1]`
+- It's what I want most. One person, all in  `[1, 0, 0]`
+- Two of us, plus a third we both adore: a triad  `[0.9, 0.9, 0.4]`
 - I want a primary partner, but I need freedom too  `[0.7, 0.7, 0.2]`
-- I'd rather enjoy people freely, without labels  `[0, 1, 0.3]`
+- I want several partners and love each one deeply  `[0.9, 0.8, 0.5]`
+- I'm happiest solo, with lovers and friends by choice  `[0.1, 0.6, 0.9]`
+- I'd rather have many warm connections than one big one  `[0, 0.4, 1]`
+- I'd rather enjoy people freely, without labels or hierarchy  `[0, 1, 0.3]`
 
 ## 14. Talking through boundaries and consent before play feels…
 
 - Sexy. A clear yes is hot  `[0, 1, 0.3]`
 - Loving. It's how I show I care  `[1, 0.2, 0.4]`
 - Like planning a road trip with a friend  `[0, 0.3, 1]`
+- Essential. Good agreements are what make non-monogamy work  `[0.5, 0.5, 0.8]`
 
 ## 15. Pick a weekend.
 
-- A cabin, a hot tub, and nobody else for 48 hours  `[1, 1, 0]`
-- A kink convention: workshops by day, afterparty by night  `[0, 1, 0.6]`
 - Festival camping with the whole gang  `[0, 0.2, 1]`
 - Love letters and long baths with my person  `[1, 0.3, 0.2]`
+- A cabin, a hot tub, and nobody else for 48 hours  `[1, 1, 0]`
+- Everyone I love under one roof: cuddle piles and chaos  `[0.6, 0.5, 1]`
+- A kink convention: workshops by day, afterparty by night  `[0, 1, 0.6]`
 
 ## 16. The gift that wins you over is…
 
-- A handwritten letter about why they love me  `[1, 0, 0]`
 - Lingerie or a toy, wrapped with a bow  `[0, 1, 0]`
+- A handwritten letter about why they love me  `[1, 0, 0]`
 - Something thoughtful that proves they really know me  `[0.3, 0, 1]`
 
 ## 17. In bed, what matters most?
@@ -125,10 +142,11 @@ Weights are [Romance, Sexuality, Friendship], 0 to 1. Edit js/questions.js to ch
 
 ## 18. At a party, you go home with…
 
-- Whoever I've been flirting with all night  `[0, 1, 0]`
-- The person I couldn't stop talking to  `[0.5, 0.2, 1]`
 - My partner, hand in hand  `[1, 0.2, 0]`
 - My friends, same as I arrived  `[0, 0, 1]`
+- The person I couldn't stop talking to  `[0.5, 0.2, 1]`
+- Whoever I've been flirting with all night  `[0, 1, 0]`
+- Maybe more than one person, if everyone's into it  `[0, 1, 0.4]`
 
 ## 19. Your love language is…
 
@@ -141,40 +159,45 @@ Weights are [Romance, Sexuality, Friendship], 0 to 1. Edit js/questions.js to ch
 
 - Kiss them. Obviously  `[0, 1, 0.5]`
 - Laugh it off and order pizza  `[0, 0, 1]`
-- Take it slow and ask whether this could be real love  `[1, 0.4, 0.3]`
+- Check in with my partner(s), then kiss them  `[0.3, 1, 0.5]`
 - Make a plan with terms and boundaries, then jump  `[0, 0.8, 0.8]`
+- Take it slow and ask whether this could be real love  `[1, 0.4, 0.3]`
 
 ## 21. What do sex-positive spaces (munches, workshops, play parties) mean to you?
 
-- A place to explore desire out loud  `[0, 1, 0.3]`
 - A place to find my people  `[0, 0.2, 1]`
+- A place to explore desire out loud  `[0, 1, 0.3]`
 - A place I might meet someone to fall for  `[1, 0.3, 0.4]`
+- A place to meet others living non-monogamy openly  `[0.3, 0.5, 1]`
 
 ## 22. Which relationship moment would you hate to miss?
 
 - The first “I love you”  `[1, 0, 0]`
-- The first time we really can't keep our hands off each other  `[0, 1, 0]`
+- Watching two people I love become friends  `[0.5, 0.2, 1]`
 - The first time we laugh so hard we can't breathe  `[0, 0, 1]`
 - The first time we try something new and a little wicked  `[0.3, 1, 0.5]`
+- The first time we really can't keep our hands off each other  `[0, 1, 0]`
 
 ## 23. Your texting habits with someone you're into are…
 
-- Sweet good-mornings and good-nights  `[1, 0, 0.3]`
 - Flirty pics and filthy promises  `[0, 1, 0]`
 - Memes, gossip and constant banter  `[0, 0.2, 1]`
+- Sweet good-mornings and good-nights  `[1, 0, 0.3]`
 - Plans, plans, plans. Let's get together already  `[0.3, 0.8, 0.5]`
+- A group chat with everyone I'm dating, mostly memes  `[0.3, 0.3, 1]`
 
 ## 24. Complete the sentence: “The best part of intimacy is…”
 
-- Being chosen  `[1, 0, 0]`
 - The heat  `[0, 1, 0]`
 - Being known  `[0.4, 0, 1]`
+- Being chosen  `[1, 0, 0]`
 - Getting to be playful and wild with someone  `[0.2, 0.8, 0.7]`
 
 ## 25. If a partner told you they're asexual, you'd…
 
+- Respect it, but sex is essential for me  `[0.2, 1, 0]`
 - Be curious. We'd find what intimacy means for us  `[1, 0, 0.8]`
 - Be honest about my needs and what we could negotiate  `[0.4, 1, 0.4]`
-- Respect it, but sex is essential for me  `[0.2, 1, 0]`
 - Be happy for them. I'm happy with closeness without sex too  `[0.7, 0, 1]`
+- Be glad for the closeness, and seek sex elsewhere if we both agree  `[0.6, 1, 0.6]`
 
