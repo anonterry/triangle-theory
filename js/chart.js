@@ -80,6 +80,7 @@
     if (compact) { vert(V.R, "Romance", 0, -20, "center"); vert(V.S, "Sexuality", 8, 26, "left"); vert(V.F, "Friendship", -8, 26, "right"); }
     else { vert(V.R, "Romance", 0, -22, "center"); vert(V.S, "Sexuality", -4, 24, "right"); vert(V.F, "Friendship", 4, 24, "left"); }
 
+    if (o.noUser) return;
     const [ux, uy] = pt(...result.shares);
     const g = ctx.createRadialGradient(ux, uy, 0, ux, uy, 34 / k * (compact ? .8 : 1));
     g.addColorStop(0, accent + "88"); g.addColorStop(1, accent + "00");
@@ -127,5 +128,26 @@
     for (const ln of lines) { ctx.fillText(ln, pad, y); y += 36; }
     ctx.fillStyle = "#7d707a"; ctx.font = `500 14px ${SANS}`; ctx.textAlign = "center";
     ctx.fillText("anonterry.github.io/triangle-theory", CW / 2, H - 28);
+  };
+
+  // Landscape 1200x630 preview image for a zone (used for Discord/social link previews).
+  window.renderOG = function (canvas, region, accent) {
+    const W = 1200, H = 630; canvas.width = W; canvas.height = H;
+    const ctx = canvas.getContext("2d");
+    ctx.fillStyle = "#061317"; ctx.fillRect(0, 0, W, H);
+    const g = ctx.createRadialGradient(240, 0, 0, 240, 0, 700); g.addColorStop(0, accent + "33"); g.addColorStop(1, accent + "00");
+    ctx.fillStyle = g; ctx.fillRect(0, 0, W, H);
+    ctx.save(); ctx.translate(26, 44); ctx.scale(.9, .9);
+    drawChart(ctx, { shares: region.center, region }, { k: 1, compact: false, accent, noUser: true });
+    ctx.restore();
+    const x = 780, w = 380; ctx.textAlign = "left"; ctx.textBaseline = "alphabetic";
+    ctx.fillStyle = accent; ctx.font = `700 15px ${SANS}`; if (ctx.letterSpacing !== undefined) ctx.letterSpacing = "4px";
+    ctx.fillText("TRIANGLE THEORY", x, 120); if (ctx.letterSpacing !== undefined) ctx.letterSpacing = "0px";
+    ctx.fillStyle = "#fff"; ctx.font = `600 46px ${SERIF}`;
+    let y = 185; for (const ln of wrap(ctx, region.name, w)) { ctx.fillText(ln, x, y); y += 54; }
+    ctx.fillStyle = "#b9d0cd"; ctx.font = `500 25px ${SERIF}`; y += 8;
+    const sents = region.desc.split(/(?<=\.) /); let first = sents[0]; if (first.length < 90 && sents[1]) first += " " + sents[1];
+    for (const ln of wrap(ctx, first, w).slice(0, 7)) { ctx.fillText(ln, x, y); y += 33; }
+    ctx.fillStyle = accent; ctx.font = `700 17px ${SANS}`; ctx.fillText("Where do you land? Take the quiz \u2192", x, H - 54);
   };
 })();
