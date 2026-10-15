@@ -8,6 +8,7 @@ Weights are [Romance, Sexuality, Friendship], 0 to 1. Answers display shortest t
 - “We're at the bar and we saved you a seat!”  `[0, 0, 1]`
 - “Bringing a friend who's into you too. Say yes?”  `[0, 1, 0.6]`
 - “Can't stop thinking about you. See you tonight?”  `[1, 0, 0]`
+- “Come cuddle on the couch. Nothing else planned.”  `[0.7, 0, 0.8]`
 - “Hotel is booked. Candles optional, handcuffs not.”  `[1, 1, 0]`
 
 ## 2. What makes a date feel hot to you?
@@ -15,6 +16,7 @@ Weights are [Romance, Sexuality, Friendship], 0 to 1. Answers display shortest t
 - Obvious mutual lust and a short route to a bedroom  `[0, 1, 0]`
 - A late-night walk and a secret I've never told anyone  `[1, 0, 0.7]`
 - Laughing until my face hurts with someone who just gets me  `[0, 0.2, 1]`
+- A cozy night in, with no pressure about where it goes  `[0.7, 0, 0.8]`
 - Dancing close, grinding on a dance floor, seeing where it goes  `[0, 1, 0.4]`
 - A table for three: me and two people I'm into, with chemistry everywhere  `[0.3, 1, 0.6]`
 - A slow build: eye contact, a hand on my back, a kiss that means something  `[1, 0.6, 0]`
@@ -31,7 +33,7 @@ Weights are [Romance, Sexuality, Friendship], 0 to 1. Answers display shortest t
 
 - “Only if I could fall for you.”  `[1, 0.6, 0.3]`
 - “No thanks. The friendship is the whole point.”  `[0, 0, 1]`
-- “Yes please. Fun in bed plus my favourite person? Perfect.”  `[0, 1, 1]`
+- “Yes please. Fun in bed plus my favorite person? Perfect.”  `[0, 1, 1]`
 - “Yes, as long as my other partners know and are cool with it.”  `[0.5, 1, 0.9]`
 - “I'd rather keep sex with people I'm not friends with. Cleaner.”  `[0, 1, 0]`
 
@@ -42,7 +44,7 @@ Weights are [Romance, Sexuality, Friendship], 0 to 1. Answers display shortest t
 - Best once I'm falling for them  `[1, 0.5, 0]`
 - Fun with someone I like and trust  `[0, 1, 0.7]`
 - Part of a healthy mix. My partner(s) and I each have our own adventures  `[0.5, 1, 0.3]`
-- Great. Pleasure without the paperwork  `[0, 1, 0]`
+- Great. Sex doesn't need to mean anything more  `[0, 1, 0]`
 
 ## 6. A swingers or play-party invitation lands in your inbox. You…
 
@@ -50,6 +52,7 @@ Weights are [Romance, Sexuality, Friendship], 0 to 1. Answers display shortest t
 - RSVP before finishing the message  `[0, 1, 0]`
 - Go solo and meet new lovers there  `[0, 1, 0.4]`
 - Pass. I prefer intimacy one-on-one  `[1, 0, 0.4]`
+- Pass. Sex parties aren't for me  `[0.3, 0, 0.5]`
 - Go with friends to hang out, chat and people-watch  `[0, 0.4, 1]`
 
 ## 7. Your ideal relationship setup is… (scale)
@@ -66,6 +69,7 @@ Weights are [Romance, Sexuality, Friendship], 0 to 1. Answers display shortest t
 - I'm already typing back  `[0, 1, 0]`
 - Intriguing. Coffee first, then we'll see  `[0.6, 0.2, 0.8]`
 - Flattering, but my heart is already taken  `[1, 0, 0]`
+- Not interested. Sexual attention doesn't do much for me  `[0.2, 0, 0.6]`
 - I'm showing my friends and we're laughing about it  `[0, 0.2, 1]`
 - Flattering! I'd mention it to my partner(s), then maybe text back  `[0.5, 0.7, 0.3]`
 
@@ -74,7 +78,7 @@ Weights are [Romance, Sexuality, Friendship], 0 to 1. Answers display shortest t
 - Being wanted by a stranger. No names, no strings  `[0, 1, 0]`
 - A slow, candle-lit night with someone who adores me  `[1, 0.7, 0]`
 - A game with my best friend that turns unexpectedly hot  `[0, 0.8, 1]`
-- A bonfire trip with my favourite people. No sex required  `[0, 0, 1]`
+- A bonfire trip with my favorite people. No sex required  `[0, 0, 1]`
 - Exploring each other's kinks with someone I deeply trust  `[0.6, 1, 0.3]`
 - A threesome (or more) with people I adore, everyone eager  `[0.6, 1, 0.5]`
 
@@ -91,6 +95,7 @@ Weights are [Romance, Sexuality, Friendship], 0 to 1. Answers display shortest t
 - Teasing banter and lots of eye contact  `[0, 0.8, 0.7]`
 - Openly, even with my partner(s) in the room  `[0.3, 1, 0.6]`
 - Friend first. The rest happens or it doesn't  `[0.2, 0, 1]`
+- I don't really flirt. I just get to know people  `[0.2, 0, 1]`
 - Thoughtful compliments and old-fashioned charm  `[1, 0.2, 0]`
 
 ## 12. Your partner has a hot date with someone else, with everyone's consent. You feel… (scale)
@@ -149,7 +154,7 @@ Weights are [Romance, Sexuality, Friendship], 0 to 1. Answers display shortest t
 - Someone who knows exactly what I like  `[0.7, 1, 0.2]`
 - Novelty: new people, new places, new tricks  `[0, 1, 0.3]`
 - Being desired: the look that says they want me  `[0.2, 1, 0]`
-- Honestly, not much. Desire isn't a big part of my life  `[0.5, 0, 0.8]`
+- Not much. Desire isn't a big part of my life  `[0.5, 0, 0.8]`
 
 ## 19. Your love language is…
 
@@ -162,6 +167,7 @@ Weights are [Romance, Sexuality, Friendship], 0 to 1. Answers display shortest t
 
 - Kiss them. Obviously  `[0, 1, 0.5]`
 - Laugh it off and order pizza  `[0, 0, 1]`
+- Flattered, but I don't feel that way. I'd tell them kindly  `[0.1, 0, 1]`
 - Check in with my partner(s), then kiss them  `[0.3, 1, 0.5]`
 - Make a plan with terms and boundaries, then jump  `[0, 0.8, 0.8]`
 - Take it slow and ask whether this could be real love  `[1, 0.4, 0.3]`

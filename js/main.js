@@ -5,7 +5,7 @@
 
   function show(id) { for (const s of ["intro", "quiz", "result"]) $(s).classList.toggle("active", s === id); window.scrollTo(0, 0); }
 
-  // colour picker
+  // color picker
   function setAccent(i) {
     const [hex, rgb, hex2, on] = COLORS[i], root = document.documentElement.style;
     accentIdx = i; accent = hex;

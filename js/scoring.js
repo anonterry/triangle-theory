@@ -1,6 +1,6 @@
 // Scoring: raw totals per ingredient are compared with what *random* answering would produce
 // (computed analytically), turned into z-scores, then mapped to shares with a softmax.
-// Result: the centre isn't a magnet. Only a genuinely balanced answer pattern lands there.
+// Result: the center isn't a magnet. Only a genuinely balanced answer pattern lands there.
 (function () {
   const BETA = 0.7;  // contrast: higher pushes results further toward corners/edges
   const Q = window.QUESTIONS;
