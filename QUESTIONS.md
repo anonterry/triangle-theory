@@ -1,6 +1,6 @@
 # Triangle Theory: question bank
 
-Weights are [Romance, Sexuality, Friendship], 0 to 1. Answers display shortest to longest, except questions marked (scale), which run lowest to highest in the order shown. Edit js/questions.js to change them.
+Questions marked (multi) let you pick up to 2 answers (3 when there are 5 or more); the picks are averaged. Weights are [Romance, Sexuality, Friendship], 0 to 1. Answers display shortest to longest, except questions marked (scale), which run lowest to highest in the order shown. Edit js/questions.js to change them.
 
 
 ## 1. Friday night, your phone buzzes. Which text makes you drop everything?

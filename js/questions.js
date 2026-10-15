@@ -12,7 +12,7 @@ window.QUESTIONS = [
     ["“We're at the bar and we saved you a seat!”", [0, 0, 1]],
     ["“Hotel is booked. Candles optional, handcuffs not.”", [1, 1, 0]],
     ["“Bringing a friend who's into you too. Say yes?”", [0, 1, 0.6]] ]},
-  { q: "What makes a date feel hot to you?", a: [
+  { q: "What makes a date feel hot to you?", multi: true, a: [
     ["A slow build: eye contact, a hand on my back, a kiss that means something", [1, 0.6, 0]],
     ["Obvious mutual lust and a short route to a bedroom", [0, 1, 0]],
     ["Laughing until my face hurts with someone who just gets me", [0, 0.2, 1]],
@@ -63,7 +63,7 @@ window.QUESTIONS = [
     ["Flattering, but my heart is already taken", [1, 0, 0]],
     ["Not interested. Sexual attention doesn't do much for me", [0.2, 0, 0.6]],
     ["Flattering! I'd mention it to my partner(s), then maybe text back", [0.5, 0.7, 0.3]] ]},
-  { q: "Pick a fantasy.", a: [
+  { q: "Pick a fantasy.", multi: true, a: [
     ["A slow, candle-lit night with someone who adores me", [1, 0.7, 0]],
     ["Being wanted by a stranger. No names, no strings", [0, 1, 0]],
     ["A game with my best friend that turns unexpectedly hot", [0, 0.8, 1]],
@@ -105,7 +105,7 @@ window.QUESTIONS = [
     ["Like planning a road trip with a friend", [0, 0.3, 1]],
     ["Essential. Good agreements are what make non-monogamy work", [0.5, 0.5, 0.8]],
     ["Something I do all the time, even mid-scene, and I love it", [0.3, 0.8, 0.6]] ]},
-  { q: "Pick a weekend.", a: [
+  { q: "Pick a weekend.", multi: true, a: [
     ["A cabin, a hot tub, and nobody else for 48 hours", [1, 1, 0]],
     ["A kink convention: workshops by day, afterparty by night", [0, 1, 0.6]],
     ["Festival camping with the whole gang", [0, 0.2, 1]],
@@ -124,7 +124,7 @@ window.QUESTIONS = [
     ["Regularly, mostly with people I'm close to", [0.3, 0.9, 0.8]],
     ["Most days, with one partner or several", [0.4, 1, 0.3]],
     ["All the time. Every chance I get", [0, 1, 0]] ]},
-  { q: "What turns you on most?", a: [
+  { q: "What turns you on most?", multi: true, a: [
     ["Being desired: the look that says they want me", [0.2, 1, 0]],
     ["A brain I can't stop talking to", [0.4, 0.7, 0.7]],
     ["Someone who knows exactly what I like", [0.7, 1, 0.2]],
@@ -132,7 +132,7 @@ window.QUESTIONS = [
     ["Trust. Someone I'd tell anything", [0.6, 0.5, 1]],
     ["Novelty: new people, new places, new tricks", [0, 1, 0.3]],
     ["Not much. Desire isn't a big part of my life", [0.5, 0, 0.8]] ]},
-  { q: "Your love language is…", a: [
+  { q: "Your love language is…", multi: true, a: [
     ["Words and devotion", [1, 0, 0]],
     ["Touch, skin, and a lot of it", [0, 1, 0.5]],
     ["Quality time and inside jokes", [0, 0, 1]],
@@ -150,7 +150,7 @@ window.QUESTIONS = [
     ["A place I might meet someone to fall for", [1, 0.3, 0.4]],
     ["A place to meet others living non-monogamy openly", [0.3, 0.5, 1]],
     ["Not much. They're not really my scene", [0.3, 0, 0.3]] ]},
-  { q: "Which relationship moment would you hate to miss?", a: [
+  { q: "Which relationship moment would you hate to miss?", multi: true, a: [
     ["The first “I love you”", [1, 0, 0]],
     ["The first time we really can't keep our hands off each other", [0, 1, 0]],
     ["The first time we laugh so hard we can't breathe", [0, 0, 1]],
@@ -177,7 +177,7 @@ window.QUESTIONS = [
     ["Respect it, but sex is essential for me", [0.2, 1, 0]],
     ["Be happy for them. I'm happy with closeness without sex too", [0.7, 0, 1]],
     ["Be glad for the closeness, and seek sex elsewhere if we both agree", [0.6, 1, 0.6]] ]},
-  { q: "What's the real “glue” in your closest bond?", a: [
+  { q: "What's the real “glue” in your closest bond?", multi: true, a: [
     ["Butterflies: that giddy, can't-stop-thinking-about-you, in-love feeling", [1, 0.2, 0]],
     ["Desire: we can't keep our hands off each other", [0, 1, 0]],
     ["Both: best friends who can't keep our hands off each other", [0.2, 0.9, 1]],
@@ -198,7 +198,7 @@ window.QUESTIONS = [
     ["To make breakfast together in the morning", [0.6, 0.6, 0.8]],
     ["To talk about where this could go", [1, 0.5, 0.2]]
   ]},
-  { q: "Which sounds like your ideal lover?", a: [
+  { q: "Which sounds like your ideal lover?", multi: true, a: [
     ["Someone who makes my heart race", [1, 0.6, 0]],
     ["My best friend, with benefits", [0.1, 0.9, 1]],
     ["A skilled stranger who leaves before breakfast", [0, 1, 0]],

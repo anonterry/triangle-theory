@@ -39,22 +39,39 @@
     show("quiz"); render(); updateDot();
   }
   function render() {
-    const q = Q[idx];
+    const q = Q[idx], multi = !!q.multi, cap = multi ? window.capOf(q) : 1;
     $("progress-bar").style.width = (idx / Q.length * 100) + "%";
     $("progress-text").textContent = `${idx + 1} / ${Q.length}`;
     $("qnum").textContent = `QUESTION ${idx + 1}`;
     $("question").textContent = q.q;
+    $("pick-hint").hidden = $("next").hidden = !multi;
+    if (multi) $("pick-hint").textContent = `Pick up to ${cap}`;
     const box = $("answers"); box.textContent = "";
+    const advance = () => { if (idx < Q.length - 1) { idx++; render(); } else present(window.computeShares(answers), false); };
+    const sel = () => answers[idx] || [];
+    const paint = () => { [...box.children].forEach(c => c.classList.toggle("chosen", sel().includes(+c.dataset.ai))); $("next").disabled = !sel().length; };
     order[idx].forEach(ai => {
       const b = document.createElement("button");
-      b.type = "button"; b.className = "answer" + (answers[idx] === ai ? " chosen" : ""); b.textContent = q.a[ai][0];
-      b.onclick = () => {
-        answers[idx] = ai; updateDot();
-        b.classList.add("chosen"); [...box.children].forEach(c => c.disabled = true);
-        setTimeout(() => { if (idx < Q.length - 1) { idx++; render(); } else present(window.computeShares(answers), false); }, 180);
-      };
+      b.type = "button"; b.dataset.ai = ai; b.textContent = q.a[ai][0];
+      if (multi) {
+        b.className = "answer multi";
+        b.onclick = () => {
+          let cur = sel().slice();
+          if (cur.includes(ai)) cur = cur.filter(x => x !== ai);
+          else { cur.push(ai); if (cur.length > cap) cur.shift(); } // at the cap, the oldest pick drops off
+          answers[idx] = cur.length ? cur : null; paint(); updateDot();
+        };
+      } else {
+        b.className = "answer" + (answers[idx] === ai ? " chosen" : "");
+        b.onclick = () => {
+          answers[idx] = ai; updateDot();
+          b.classList.add("chosen"); [...box.children].forEach(c => c.disabled = true);
+          setTimeout(advance, 180);
+        };
+      }
       box.appendChild(b);
     });
+    if (multi) { paint(); $("next").textContent = idx < Q.length - 1 ? "Continue" : "See my result"; $("next").onclick = advance; }
     $("back").disabled = idx === 0;
   }
 
