@@ -94,13 +94,8 @@
       });
     }
 
-    ctx.font = F(compact ? 13 : 16, 700);
-    const vert = (p, label, dx, dy, al) => {
-      ctx.fillStyle = "#fff"; ctx.beginPath(); ctx.arc(p[0], p[1], (compact ? 5 : 8) / k, 0, 7); ctx.fill();
-      ctx.fillStyle = "#fff"; ctx.textAlign = al; ctx.textBaseline = "middle"; ctx.fillText(label, p[0] + dx / k, p[1] + dy / k);
-    };
-    if (compact) { vert(V.R, "Romance", 0, -20, "center"); vert(V.S, "Sexuality", 8, 26, "left"); vert(V.F, "Friendship", -8, 26, "right"); }
-    else { vert(V.R, "Romance", 0, -22, "center"); vert(V.S, "Sexuality", -4, 24, "right"); vert(V.F, "Friendship", 4, 24, "left"); }
+    // corner dots only; the axis titles along the edges name each corner
+    for (const p of [V.R, V.S, V.F]) { ctx.fillStyle = "#fff"; ctx.beginPath(); ctx.arc(p[0], p[1], (compact ? 5 : 8) / k, 0, 7); ctx.fill(); }
 
     if (o.noUser) return;
     const [ux, uy] = pt(...result.shares);
@@ -165,8 +160,10 @@
     const x = 780, w = 380; ctx.textAlign = "left"; ctx.textBaseline = "alphabetic";
     ctx.fillStyle = accent; ctx.font = `700 15px ${SANS}`; if (ctx.letterSpacing !== undefined) ctx.letterSpacing = "4px";
     ctx.fillText("TRIANGLE THEORY", x, 120); if (ctx.letterSpacing !== undefined) ctx.letterSpacing = "0px";
-    ctx.fillStyle = "#fff"; ctx.font = `600 46px ${SERIF}`;
-    let y = 185; for (const ln of wrap(ctx, region.name, w)) { ctx.fillText(ln, x, y); y += 54; }
+    ctx.fillStyle = "#fff"; let fs = 46; // shrink until the longest word fits the text column
+    for (; fs > 30; fs -= 2) { ctx.font = `600 ${fs}px ${SERIF}`; if (Math.max(...region.name.split(" ").map(s => ctx.measureText(s).width)) <= w) break; }
+    ctx.font = `600 ${fs}px ${SERIF}`;
+    let y = 185; for (const ln of wrap(ctx, region.name, w)) { ctx.fillText(ln, x, y); y += fs + 8; }
     ctx.fillStyle = "#b9d0cd"; ctx.font = `500 25px ${SERIF}`; y += 8;
     const sents = region.desc.split(/(?<=\.) /); let text = sents[0], lines = wrap(ctx, text, w);
     for (let i = 1; i < sents.length; i++) { const t = text + " " + sents[i], l = wrap(ctx, t, w); if (l.length > 6 || (lines.length >= 3 && text.length >= 90)) break; text = t; lines = l; }
