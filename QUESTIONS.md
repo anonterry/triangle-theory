@@ -79,7 +79,7 @@ Questions marked (multi) let you pick up to 2 answers (3 when there are 5 or mor
 - Not interested. Sexual attention doesn't do much for me  `[0.2, 0, 0.6]`
 - Flattering! I'd mention it to my partner(s), then maybe text back  `[0.5, 0.7, 0.3]`
 
-## 9. Pick a fantasy. (multi)
+## 9. Which fantasies appeal to you? (multi)
 
 - A slow, candle-lit night with someone who adores me  `[1, 0.7, 0.3]`
 - Being wanted by a stranger. No names, no strings  `[0, 1, 0]`
@@ -133,7 +133,7 @@ Questions marked (multi) let you pick up to 2 answers (3 when there are 5 or mor
 - Essential. Good agreements are what make non-monogamy work  `[0.5, 0.5, 0.8]`
 - Something I do all the time, even mid-scene, and I love it  `[0.3, 0.8, 0.6]`
 
-## 15. Pick a weekend. (multi)
+## 15. Which weekends sound best? (multi)
 
 - A cabin, a hot tub, and nobody else for 48 hours  `[1, 1, 0]`
 - A kink convention: workshops by day, afterparty by night  `[0, 1, 0.6]`
@@ -168,7 +168,7 @@ Questions marked (multi) let you pick up to 2 answers (3 when there are 5 or mor
 - Novelty: new people, new places, new tricks  `[0, 1, 0.3]`
 - Not much. Desire isn't a big part of my life  `[0.5, 0, 0.8]`
 
-## 19. Your love language is… (multi)
+## 19. Your love languages are… (multi)
 
 - Words and devotion  `[1, 0, 0.3]`
 - Touch, skin, and a lot of it  `[0, 1, 0.5]`
@@ -192,7 +192,7 @@ Questions marked (multi) let you pick up to 2 answers (3 when there are 5 or mor
 - A place to meet others living non-monogamy openly  `[0.3, 0.5, 1]`
 - Not much. They're not really my scene  `[0.3, 0, 0.3]`
 
-## 22. Which relationship moment would you hate to miss? (multi)
+## 22. Which relationship moments would you hate to miss? (multi)
 
 - The first “I love you”  `[1, 0, 0.3]`
 - The first time we really can't keep our hands off each other  `[0, 1, 0]`
@@ -252,7 +252,7 @@ Questions marked (multi) let you pick up to 2 answers (3 when there are 5 or mor
 - To make breakfast together in the morning  `[0.6, 0.6, 0.8]`
 - To talk about where this could go  `[1, 0.5, 0.4]`
 
-## 29. Which sounds like your ideal lover? (multi)
+## 29. Which of these sound like your ideal lover? (multi)
 
 - Someone who makes my heart race  `[1, 0.6, 0]`
 - My best friend, with benefits  `[0.1, 0.9, 1]`
@@ -268,7 +268,7 @@ Questions marked (multi) let you pick up to 2 answers (3 when there are 5 or mor
 - Desire and physical intimacy  `[0.3, 1, 0]`
 - Not much. My partner is my best friend, plus extra  `[0.6, 0.3, 1]`
 
-## 31. Which gesture from someone you love means the most? (multi)
+## 31. Which gestures from someone you love mean the most? (multi)
 
 - Showing up when I'm sick or moving apartments  `[0.4, 0, 1]`
 - A date night planned just for the two of us  `[1, 0.3, 0.2]`

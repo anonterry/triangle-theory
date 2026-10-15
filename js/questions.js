@@ -63,7 +63,7 @@ window.QUESTIONS = [
     ["Flattering, but my heart is already taken", [1, 0, 0.3]],
     ["Not interested. Sexual attention doesn't do much for me", [0.2, 0, 0.6]],
     ["Flattering! I'd mention it to my partner(s), then maybe text back", [0.5, 0.7, 0.3]] ]},
-  { q: "Pick a fantasy.", multi: true, a: [
+  { q: "Which fantasies appeal to you?", multi: true, a: [
     ["A slow, candle-lit night with someone who adores me", [1, 0.7, 0.3]],
     ["Being wanted by a stranger. No names, no strings", [0, 1, 0]],
     ["A game with my best friend that turns unexpectedly hot", [0, 0.8, 1]],
@@ -105,7 +105,7 @@ window.QUESTIONS = [
     ["Like planning a road trip with a friend", [0, 0.3, 1]],
     ["Essential. Good agreements are what make non-monogamy work", [0.5, 0.5, 0.8]],
     ["Something I do all the time, even mid-scene, and I love it", [0.3, 0.8, 0.6]] ]},
-  { q: "Pick a weekend.", multi: true, a: [
+  { q: "Which weekends sound best?", multi: true, a: [
     ["A cabin, a hot tub, and nobody else for 48 hours", [1, 1, 0]],
     ["A kink convention: workshops by day, afterparty by night", [0, 1, 0.6]],
     ["Festival camping with the whole gang", [0, 0.2, 1]],
@@ -132,7 +132,7 @@ window.QUESTIONS = [
     ["Trust. Someone I'd tell anything", [0.6, 0.5, 1]],
     ["Novelty: new people, new places, new tricks", [0, 1, 0.3]],
     ["Not much. Desire isn't a big part of my life", [0.5, 0, 0.8]] ]},
-  { q: "Your love language is…", multi: true, a: [
+  { q: "Your love languages are…", multi: true, a: [
     ["Words and devotion", [1, 0, 0.3]],
     ["Touch, skin, and a lot of it", [0, 1, 0.5]],
     ["Quality time and inside jokes", [0, 0, 1]],
@@ -150,7 +150,7 @@ window.QUESTIONS = [
     ["A place I might meet someone to fall for", [1, 0.3, 0.4]],
     ["A place to meet others living non-monogamy openly", [0.3, 0.5, 1]],
     ["Not much. They're not really my scene", [0.3, 0, 0.3]] ]},
-  { q: "Which relationship moment would you hate to miss?", multi: true, a: [
+  { q: "Which relationship moments would you hate to miss?", multi: true, a: [
     ["The first “I love you”", [1, 0, 0.3]],
     ["The first time we really can't keep our hands off each other", [0, 1, 0]],
     ["The first time we laugh so hard we can't breathe", [0, 0, 1]],
@@ -198,7 +198,7 @@ window.QUESTIONS = [
     ["To make breakfast together in the morning", [0.6, 0.6, 0.8]],
     ["To talk about where this could go", [1, 0.5, 0.4]]
   ]},
-  { q: "Which sounds like your ideal lover?", multi: true, a: [
+  { q: "Which of these sound like your ideal lover?", multi: true, a: [
     ["Someone who makes my heart race", [1, 0.6, 0]],
     ["My best friend, with benefits", [0.1, 0.9, 1]],
     ["A skilled stranger who leaves before breakfast", [0, 1, 0]],
@@ -212,7 +212,7 @@ window.QUESTIONS = [
     ["Desire and physical intimacy", [0.3, 1, 0]],
     ["Not much. My partner is my best friend, plus extra", [0.6, 0.3, 1]]
   ]},
-  { q: "Which gesture from someone you love means the most?", multi: true, a: [
+  { q: "Which gestures from someone you love mean the most?", multi: true, a: [
     ["Showing up when I'm sick or moving apartments", [0.4, 0, 1]],
     ["A date night planned just for the two of us", [1, 0.3, 0.2]],
     ["Telling me the truth when I need to hear it", [0.3, 0, 1]],
