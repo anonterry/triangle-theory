@@ -65,11 +65,23 @@
       ctx.textAlign = "left"; p = pt(t, 0, 1 - t); ctx.fillText(s, p[0] + 8 / k * (compact ? .8 : 1.2), p[1]);
       ctx.textAlign = "center"; ctx.textBaseline = "top"; p = pt(0, 1 - t, t); ctx.fillText(s, p[0], p[1] + 8 / k);
     }
+    // axis titles run along each edge, reading in the direction the numbers increase (arrow points toward 100)
+    const axisTitle = (text, mid, nx, ny, ang, px, font, color, spacing) => {
+      ctx.save(); ctx.translate(mid[0] + nx * px / k, mid[1] + ny * px / k); ctx.rotate(ang);
+      ctx.font = font; ctx.fillStyle = color; ctx.textAlign = "center"; ctx.textBaseline = "middle";
+      if (ctx.letterSpacing !== undefined) ctx.letterSpacing = spacing;
+      ctx.fillText(text, 0, 0); if (ctx.letterSpacing !== undefined) ctx.letterSpacing = "0px"; ctx.restore();
+    };
+    const mL = pt(.5, .5, 0), mR = pt(.5, 0, .5), mB = pt(0, .5, .5), rad = Math.PI / 3;
+    const tPx = compact ? 28 : 40, tFont = `800 ${compact ? 10.5 / k : 13}px ${SANS}`, tCol = "#e6f2f0", sp = compact ? `${1.2 / k}px` : "3px";
+    axisTitle("\u2190 SEXUALITY", mL, -.866, -.5, -rad, tPx, tFont, tCol, sp);
+    axisTitle("\u2190 ROMANCE", mR, .866, -.5, rad, tPx, tFont, tCol, sp);
+    axisTitle("FRIENDSHIP \u2192", mB, 0, 1, 0, compact ? 50 : 38, tFont, tCol, sp);
     if (!compact) {
-      ctx.font = `italic 500 13px ${SANS}`; ctx.textBaseline = "middle";
-      ctx.fillStyle = "#c25ae0"; ctx.textAlign = "right"; ctx.fillText("aplatonic line", 170, 255);
-      ctx.fillStyle = "#2fd272"; ctx.textAlign = "left"; ctx.fillText("asexual line", 665, 255);
-      ctx.fillStyle = "#8a8af5"; ctx.textAlign = "center"; ctx.fillText("aromantic line", 410, 592);
+      const lFont = `italic 500 13px ${SANS}`;
+      axisTitle("aplatonic line (no friendship)", mL, -.866, -.5, -rad, 66, lFont, "#c25ae0", "0px");
+      axisTitle("asexual line (no sexuality)", mR, .866, -.5, rad, 66, lFont, "#2fd272", "0px");
+      axisTitle("aromantic line (no romance)", mB, 0, 1, 0, 62, lFont, "#8a8af5", "0px");
       ctx.font = `700 12px ${SANS}`; ctx.textBaseline = "middle";
       regions.forEach((r, i) => {
         if (o.og && r !== result.region) return;
@@ -105,7 +117,7 @@
   // Responsive on-screen chart.
   window.renderChart = function (canvas, result, accent) {
     const W = Math.min(canvas.parentElement.clientWidth || 820, 820), k = W / 820, dpr = Math.min(window.devicePixelRatio || 1, 3);
-    const padT = 26, padB = 34; // css px of breathing room for vertex/tick labels
+    const padT = 26, padB = W < 600 ? 56 : 34; // css px of breathing room for vertex/tick labels
     canvas.width = Math.round(W * dpr); canvas.height = Math.round((600 * k + padT + padB) * dpr);
     const ctx = canvas.getContext("2d"); ctx.setTransform(dpr * k, 0, 0, dpr * k, 0, padT * dpr);
     drawChart(ctx, result, { k, compact: W < 600, accent });
