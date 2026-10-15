@@ -4,8 +4,8 @@
 (function () {
   const BETA = 0.7;  // contrast: higher pushes results further toward corners/edges
   const Q = window.QUESTIONS;
-  // multi-select questions: choose up to cap answers (2 for small lists, 3 for 5+); the chosen weights are averaged
-  const capOf = q => q.a.length >= 5 ? 3 : 2;
+  // multi-select questions: choose up to cap answers (2 for up to 5 answers, 3 for 6+); the chosen weights are averaged
+  const capOf = q => q.a.length >= 6 ? 3 : 2;
   window.capOf = capOf;
   const avg = (q, idxs) => { const w = [0, 0, 0]; idxs.forEach(i => q.a[i][1].forEach((v, k) => w[k] += v / idxs.length)); return w; };
   // the "random answerer" baseline: one random answer, or (multi) a random subset of allowed size
