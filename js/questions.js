@@ -7,6 +7,7 @@ window.QUESTIONS = [
   { q: "Friday night, your phone buzzes. Which text makes you drop everything?", a: [
     ["“Come over. Wear nothing under the coat.”", [0, 1, 0]],
     ["“Can't stop thinking about you. See you tonight?”", [1, 0, 0]],
+    ["“Come over. I've got wine, a good playlist, and plans for later.”", [0.2, 0.8, 0.8]],
     ["“Come cuddle on the couch. Nothing else planned.”", [0.7, 0, 0.8]],
     ["“We're at the bar and we saved you a seat!”", [0, 0, 1]],
     ["“Hotel is booked. Candles optional, handcuffs not.”", [1, 1, 0]],
@@ -15,6 +16,7 @@ window.QUESTIONS = [
     ["A slow build: eye contact, a hand on my back, a kiss that means something", [1, 0.6, 0]],
     ["Obvious mutual lust and a short route to a bedroom", [0, 1, 0]],
     ["Laughing until my face hurts with someone who just gets me", [0, 0.2, 1]],
+    ["Easy banter with a friend that slowly turns into flirting", [0, 0.8, 1]],
     ["A cozy night in, with no pressure about where it goes", [0.7, 0, 0.8]],
     ["A late-night walk and a secret I've never told anyone", [1, 0, 0.7]],
     ["Dancing close, grinding on a dance floor, seeing where it goes", [0, 1, 0.4]],
@@ -35,7 +37,8 @@ window.QUESTIONS = [
     ["Not part of my life, and I'm happy that way", [0.6, 0, 0.8]],
     ["Not really my thing. I connect in other ways", [0.3, 0, 1]],
     ["Best once I'm falling for them", [1, 0.5, 0]],
-    ["Fun with someone I like and trust", [0, 1, 0.7]],
+    ["Best with someone I know and like as a friend", [0.1, 0.9, 1]],
+    ["Fun with someone I like and trust", [0, 1, 0.8]],
     ["Part of a healthy mix. My partner(s) and I each have our own adventures", [0.5, 1, 0.3]],
     ["Great. Sex doesn't need to mean anything more", [0, 1, 0]] ]},
   { q: "A swingers or play-party invitation lands in your inbox. You…", a: [
@@ -55,6 +58,7 @@ window.QUESTIONS = [
   { q: "Someone slips you their number with a note about exactly what they'd do to you.", a: [
     ["I'm already typing back", [0, 1, 0]],
     ["Intriguing. Coffee first, then we'll see", [0.6, 0.2, 0.8]],
+    ["Intriguing. I'd want to know them as a person first, then see", [0.3, 0.7, 0.9]],
     ["I'm showing my friends and we're laughing about it", [0, 0.2, 1]],
     ["Flattering, but my heart is already taken", [1, 0, 0]],
     ["Not interested. Sexual attention doesn't do much for me", [0.2, 0, 0.6]],
@@ -65,6 +69,7 @@ window.QUESTIONS = [
     ["A game with my best friend that turns unexpectedly hot", [0, 0.8, 1]],
     ["A bonfire trip with my favorite people. No sex required", [0, 0, 1]],
     ["Exploring each other's kinks with someone I deeply trust", [0.6, 1, 0.3]],
+    ["A long weekend away with a lover who's also my best friend", [0.5, 0.9, 1]],
     ["A threesome (or more) with people I adore, everyone eager", [0.6, 1, 0.5]] ]},
   { q: "Kink, fetish and power play are…", keep: true, a: [
     ["Not really my thing", [0.3, 0, 0.3]],
@@ -73,6 +78,7 @@ window.QUESTIONS = [
     ["A core part of my sex life", [0, 1, 0]] ]},
   { q: "Your flirting style is…", a: [
     ["Teasing banter and lots of eye contact", [0, 0.8, 0.7]],
+    ["Playful and warm. I flirt best with people I'm comfortable with", [0.1, 0.8, 1]],
     ["Thoughtful compliments and old-fashioned charm", [1, 0.2, 0]],
     ["Direct: “I want you.”", [0, 1, 0]],
     ["Friend first. The rest happens or it doesn't", [0.2, 0, 1]],
@@ -103,28 +109,32 @@ window.QUESTIONS = [
     ["A cabin, a hot tub, and nobody else for 48 hours", [1, 1, 0]],
     ["A kink convention: workshops by day, afterparty by night", [0, 1, 0.6]],
     ["Festival camping with the whole gang", [0, 0.2, 1]],
+    ["A road trip with a friend I'm secretly (or not so secretly) into", [0.2, 0.8, 1]],
     ["Love letters and long baths with my person", [1, 0.3, 0.2]],
     ["Everyone I love under one roof: cuddle piles and chaos", [0.6, 0.5, 1]] ]},
   { q: "The gift that wins you over is…", a: [
     ["A handwritten letter about why they love me", [1, 0, 0]],
     ["Lingerie or a toy, wrapped with a bow", [0, 1, 0]],
+    ["A running joke turned into a very naughty gift", [0.2, 0.8, 1]],
     ["Something thoughtful that proves they really know me", [0.3, 0, 1]] ]},
   { q: "How much sex would your dream week include?", keep: true, a: [
     ["None, and that's perfect", [0.5, 0, 0.8]],
     ["A little, with someone I feel close to", [0.8, 0.4, 0.5]],
     ["Regularly. A few good nights", [0.4, 0.8, 0.3]],
+    ["Regularly, mostly with people I'm close to", [0.3, 0.9, 0.8]],
     ["Most days, with one partner or several", [0.4, 1, 0.3]],
     ["All the time. Every chance I get", [0, 1, 0]] ]},
   { q: "What turns you on most?", a: [
     ["Being desired: the look that says they want me", [0.2, 1, 0]],
     ["A brain I can't stop talking to", [0.4, 0.7, 0.7]],
     ["Someone who knows exactly what I like", [0.7, 1, 0.2]],
+    ["Chemistry with someone who's also my friend", [0.2, 0.9, 0.9]],
     ["Trust. Someone I'd tell anything", [0.6, 0.5, 1]],
     ["Novelty: new people, new places, new tricks", [0, 1, 0.3]],
     ["Not much. Desire isn't a big part of my life", [0.5, 0, 0.8]] ]},
   { q: "Your love language is…", a: [
     ["Words and devotion", [1, 0, 0]],
-    ["Touch, skin, and a lot of it", [0, 1, 0.3]],
+    ["Touch, skin, and a lot of it", [0, 1, 0.5]],
     ["Quality time and inside jokes", [0, 0, 1]],
     ["Acts of service, like cooking dinner together (naked optional)", [0.8, 0.5, 0.3]] ]},
   { q: "You and a close friend both confess that you've always found each other hot. Next move?", a: [
@@ -151,12 +161,14 @@ window.QUESTIONS = [
   { q: "Your texting habits with someone you're into are…", a: [
     ["Sweet good-mornings and good-nights", [1, 0, 0.3]],
     ["Flirty pics and filthy promises", [0, 1, 0]],
+    ["Dirty jokes and memes in the same thread", [0.1, 0.8, 1]],
     ["Memes, gossip and constant banter", [0, 0.2, 1]],
     ["Plans, plans, plans. Let's get together already", [0.3, 0.8, 0.5]],
     ["A group chat with everyone I'm dating, mostly memes", [0.3, 0.3, 1]] ]},
   { q: "Complete the sentence: “The best part of intimacy is…”", a: [
     ["Being chosen", [1, 0, 0]],
     ["The heat", [0, 1, 0]],
+    ["Heat with someone I actually like", [0.2, 0.9, 0.9]],
     ["Being known", [0.4, 0, 1]],
     ["Getting to be playful and wild with someone", [0.2, 0.8, 0.7]] ]},
   { q: "If a partner told you they're asexual, you'd…", a: [
@@ -168,8 +180,29 @@ window.QUESTIONS = [
   { q: "What's the real “glue” in your closest bond?", a: [
     ["Butterflies: that giddy, can't-stop-thinking-about-you, in-love feeling", [1, 0.2, 0]],
     ["Desire: we can't keep our hands off each other", [0, 1, 0]],
+    ["Both: best friends who can't keep our hands off each other", [0.2, 0.9, 1]],
     ["Ease: I can be fully myself and we never run out of things to say", [0, 0, 1]],
     ["Devotion: choosing each other, building a life, being each other's person", [1, 0, 0.4]],
     ["Play: banter, inside jokes and being total goofballs together", [0, 0.3, 1]],
-    ["Trust: they'd get my keys, my secrets and my phone password", [0.3, 0.2, 1]] ]}
+    ["Trust: they'd get my keys, my secrets and my phone password", [0.3, 0.2, 1]] ]},
+  { q: "How do you feel about sex with someone you barely know?", keep: true, a: [
+    ["Not for me. I need real connection first", [0.6, 0.2, 0.6]],
+    ["Only after we've become friends. Trust makes it better", [0.1, 0.9, 1]],
+    ["A good conversation is enough. Chemistry does the rest", [0.1, 1, 0.5]],
+    ["Great. Strangers are hot, and anonymous is fine", [0, 1, 0]]
+  ]},
+  { q: "After really good sex, what do you want most?", a: [
+    ["To do it again", [0, 1, 0]],
+    ["Space, then a friendly text tomorrow", [0.1, 0.8, 0.5]],
+    ["To cuddle, talk and laugh for hours, like we're best friends", [0.3, 0.7, 1]],
+    ["To make breakfast together in the morning", [0.6, 0.6, 0.8]],
+    ["To talk about where this could go", [1, 0.5, 0.2]]
+  ]},
+  { q: "Which sounds like your ideal lover?", a: [
+    ["Someone who makes my heart race", [1, 0.6, 0]],
+    ["My best friend, with benefits", [0.1, 0.9, 1]],
+    ["A skilled stranger who leaves before breakfast", [0, 1, 0]],
+    ["Someone I can be silly with in bed and out of it", [0.3, 0.9, 0.9]],
+    ["Someone whose company I love, with or without sex", [0.6, 0.3, 1]]
+  ]}
 ];
