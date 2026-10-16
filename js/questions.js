@@ -178,13 +178,10 @@ window.QUESTIONS = [
     ["Be happy for them. I'm happy with closeness without sex too", [0.7, 0, 1]],
     ["Be glad for the closeness, and seek sex elsewhere if we both agree", [0.6, 1, 0.6]] ]},
   { q: "What's the real “glue” in your closest bond?", multi: true, a: [
-    ["Butterflies: that giddy, can't-stop-thinking-about-you, in-love feeling", [1, 0.2, 0]],
+    ["Romance: butterflies, devotion and choosing each other", [1, 0.1, 0.2]],
     ["Desire: we can't keep our hands off each other", [0, 1, 0]],
-    ["Chemistry: best friends who can't keep our hands off each other", [0.2, 0.9, 1]],
-    ["Ease: I can be fully myself and we never run out of things to say", [0, 0, 1]],
-    ["Devotion: choosing each other, building a life, being each other's person", [1, 0, 0.4]],
-    ["Play: banter, inside jokes and being total goofballs together", [0, 0.3, 1]],
-    ["Trust: they'd get my keys, my secrets and my phone password", [0.3, 0.2, 1]] ]},
+    ["Friendship: trust, ease and knowing they've always got my back", [0, 0.1, 1]],
+    ["Compatibility: we want the same things and it just works", [0.35, 0.3, 0.35]] ]},
   { q: "How do you feel about sex with someone you barely know?", keep: true, a: [
     ["Not for me. I need real connection first", [0.6, 0.2, 0.6]],
     ["Only after we've become friends. Trust makes it better", [0.1, 0.9, 1]],
