@@ -148,7 +148,7 @@ window.QUESTIONS = [
     ["Take it slow and ask whether this could be real love", [1, 0.4, 0.3]],
     ["Make a plan with terms and boundaries, then jump", [0, 0.8, 0.8]],
     ["Check in with my partner(s), then kiss them", [0.3, 1, 0.5]] ]},
-  { q: "What do sex-positive spaces (munches, workshops, play parties) mean to you?", keep: true, a: [
+  { q: "What do sex-positive spaces (munches, workshops, play parties) mean to you?", keep: true, multi: true, exclusive: 0, a: [
     ["Not much. They're not really my scene", [0.3, 0, 0.3]],
     ["A place to learn new skills and ask honest questions", [0.1, 0.4, 0.7]],
     ["A place to find my people", [0, 0.2, 1]],

@@ -122,3 +122,4 @@ button:focus-visible,summary:focus-visible { outline:3px solid #fff; outline-off
 }
 @media (max-width:360px) { .hero h1 { font-size:44px; } .eyebrow { letter-spacing:.16em; } }
 [hidden] { display:none !important; }
+.answer:disabled:not(.chosen) { opacity:.35; cursor:default; transform:none; }

@@ -4,7 +4,7 @@
 (function () {
   const BETA = 0.7;  // contrast: higher pushes results further toward corners/edges
   const Q = window.QUESTIONS;
-  // multi-select questions: choose up to cap answers (2 for up to 5 answers, 3 for 6+); the chosen weights are averaged
+  // multi-select questions (q.exclusive = index of an answer that can't be combined with others): choose up to cap answers (2 for up to 5 answers, 3 for 6+); the chosen weights are averaged
   const capOf = q => q.a.length >= 6 ? 3 : 2;
   window.capOf = capOf;
   const avg = (q, idxs) => { const w = [0, 0, 0]; idxs.forEach(i => q.a[i][1].forEach((v, k) => w[k] += v / idxs.length)); return w; };
@@ -14,7 +14,7 @@
     const n = q.a.length, cap = capOf(q), out = [];
     for (let m = 1; m < (1 << n); m++) {
       const idxs = []; for (let i = 0; i < n; i++) if (m >> i & 1) idxs.push(i);
-      if (idxs.length <= cap) out.push(avg(q, idxs));
+      if (idxs.length <= cap && !(q.exclusive != null && idxs.length > 1 && idxs.includes(q.exclusive))) out.push(avg(q, idxs));
     }
     return out;
   }

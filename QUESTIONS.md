@@ -188,7 +188,7 @@ Questions marked (multi) let you pick up to 2 answers (3 when there are 6 or mor
 - Make a plan with terms and boundaries, then jump  `[0, 0.8, 0.8]`
 - Check in with my partner(s), then kiss them  `[0.3, 1, 0.5]`
 
-## 21. What do sex-positive spaces (munches, workshops, play parties) mean to you? (scale)
+## 21. What do sex-positive spaces (munches, workshops, play parties) mean to you? (multi, scale; "Not much" can't be combined)
 
 - Not much. They're not really my scene  `[0.3, 0, 0.3]`
 - A place to learn new skills and ask honest questions  `[0.1, 0.4, 0.7]`

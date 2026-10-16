@@ -49,7 +49,12 @@
     const box = $("answers"); box.textContent = "";
     const advance = () => { if (idx < Q.length - 1) { idx++; render(); } else present(window.computeShares(answers), false); };
     const sel = () => answers[idx] || [];
-    const paint = () => { [...box.children].forEach(c => c.classList.toggle("chosen", sel().includes(+c.dataset.ai))); $("next").disabled = !sel().length; };
+    // an "exclusive" answer (like "Not much") disables the others while it's checked
+    const paint = () => {
+      const lock = multi && q.exclusive != null && sel().includes(q.exclusive);
+      [...box.children].forEach(c => { const a = +c.dataset.ai; c.classList.toggle("chosen", sel().includes(a)); c.disabled = lock && a !== q.exclusive; });
+      $("next").disabled = !sel().length;
+    };
     order[idx].forEach(ai => {
       const b = document.createElement("button");
       b.type = "button"; b.dataset.ai = ai; b.textContent = q.a[ai][0];
@@ -58,6 +63,7 @@
         b.onclick = () => {
           let cur = sel().slice();
           if (cur.includes(ai)) cur = cur.filter(x => x !== ai);
+          else if (ai === q.exclusive) cur = [ai]; // checking it clears everything else
           else { cur.push(ai); if (cur.length > cap) cur.shift(); } // at the cap, the oldest pick drops off
           answers[idx] = cur.length ? cur : null; paint(); updateDot();
         };
