@@ -171,12 +171,6 @@ window.QUESTIONS = [
     ["Memes, gossip and constant banter", [0, 0.2, 1]],
     ["Plans, plans, plans. Let's get together already", [0.3, 0.8, 0.5]],
     ["A group chat with everyone I'm dating, mostly memes", [0.3, 0.3, 1]] ]},
-  { q: "Complete the sentence: “The best part of intimacy is…”", a: [
-    ["Being chosen", [1, 0, 0.4]],
-    ["The heat", [0, 1, 0]],
-    ["Heat with someone I actually like", [0.2, 0.9, 0.9]],
-    ["Being known", [0.4, 0, 1]],
-    ["Getting to be playful and wild with someone", [0.2, 0.8, 0.7]] ]},
   { q: "If a partner told you they're asexual, you'd…", a: [
     ["Be curious. We'd find what intimacy means for us", [1, 0, 0.8]],
     ["Be honest about my needs and what we could negotiate", [0.4, 1, 0.4]],

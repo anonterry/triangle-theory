@@ -4,6 +4,7 @@ Questions marked (multi) let you pick up to 2 answers (3 when there are 6 or mor
 
 
 
+
 ## 1. Friday night, your phone buzzes. Which text makes you drop everything?
 
 - “Come over. Wear nothing under the coat.”  `[0, 1, 0]`
@@ -188,7 +189,7 @@ Questions marked (multi) let you pick up to 2 answers (3 when there are 6 or mor
 - Make a plan with terms and boundaries, then jump  `[0, 0.8, 0.8]`
 - Check in with my partner(s), then kiss them  `[0.3, 1, 0.5]`
 
-## 21. What do sex-positive spaces (munches, workshops, play parties) mean to you? (multi, scale; "Not much" can't be combined)
+## 21. What do sex-positive spaces (munches, workshops, play parties) mean to you? (multi, scale)
 
 - Not much. They're not really my scene  `[0.3, 0, 0.3]`
 - A place to learn new skills and ask honest questions  `[0.1, 0.4, 0.7]`
@@ -217,15 +218,7 @@ Questions marked (multi) let you pick up to 2 answers (3 when there are 6 or mor
 - Plans, plans, plans. Let's get together already  `[0.3, 0.8, 0.5]`
 - A group chat with everyone I'm dating, mostly memes  `[0.3, 0.3, 1]`
 
-## 24. Complete the sentence: “The best part of intimacy is…”
-
-- Being chosen  `[1, 0, 0.4]`
-- The heat  `[0, 1, 0]`
-- Heat with someone I actually like  `[0.2, 0.9, 0.9]`
-- Being known  `[0.4, 0, 1]`
-- Getting to be playful and wild with someone  `[0.2, 0.8, 0.7]`
-
-## 25. If a partner told you they're asexual, you'd…
+## 24. If a partner told you they're asexual, you'd…
 
 - Be curious. We'd find what intimacy means for us  `[1, 0, 0.8]`
 - Be honest about my needs and what we could negotiate  `[0.4, 1, 0.4]`
@@ -233,7 +226,7 @@ Questions marked (multi) let you pick up to 2 answers (3 when there are 6 or mor
 - Be happy for them. I'm happy with closeness without sex too  `[0.7, 0, 1]`
 - Be glad for the closeness, and seek sex elsewhere if we both agree  `[0.6, 1, 0.6]`
 
-## 26. What's the real “glue” in your closest bond? (multi)
+## 25. What's the real “glue” in your closest bond? (multi)
 
 - Butterflies: that giddy, can't-stop-thinking-about-you, in-love feeling  `[1, 0.2, 0]`
 - Desire: we can't keep our hands off each other  `[0, 1, 0]`
@@ -243,14 +236,14 @@ Questions marked (multi) let you pick up to 2 answers (3 when there are 6 or mor
 - Play: banter, inside jokes and being total goofballs together  `[0, 0.3, 1]`
 - Trust: they'd get my keys, my secrets and my phone password  `[0.3, 0.2, 1]`
 
-## 27. How do you feel about sex with someone you barely know? (scale)
+## 26. How do you feel about sex with someone you barely know? (scale)
 
 - Not for me. I need real connection first  `[0.6, 0.2, 0.6]`
 - Only after we've become friends. Trust makes it better  `[0.1, 0.9, 1]`
 - A good conversation is enough. Chemistry does the rest  `[0.1, 1, 0.5]`
 - Great. Strangers are hot, and anonymous is fine  `[0, 1, 0]`
 
-## 28. After really good sex, what do you want most?
+## 27. After really good sex, what do you want most?
 
 - To do it again  `[0, 1, 0]`
 - Space, then a friendly text tomorrow  `[0.1, 0.8, 0.5]`
@@ -258,7 +251,7 @@ Questions marked (multi) let you pick up to 2 answers (3 when there are 6 or mor
 - To make breakfast together in the morning  `[0.6, 0.6, 0.8]`
 - To talk about where this could go  `[1, 0.5, 0.4]`
 
-## 29. Which of these sound like your ideal lover? (multi)
+## 28. Which of these sound like your ideal lover? (multi)
 
 - Someone who makes my heart race  `[1, 0.6, 0]`
 - My best friend, with benefits  `[0.1, 0.9, 1]`
@@ -266,7 +259,7 @@ Questions marked (multi) let you pick up to 2 answers (3 when there are 6 or mor
 - Someone I can be silly with in bed and out of it  `[0.3, 0.9, 0.9]`
 - Someone whose company I love, with or without sex  `[0.6, 0.3, 1]`
 
-## 30. What does a partner give you that a friend doesn't? (multi)
+## 29. What does a partner give you that a friend doesn't? (multi)
 
 - The feeling of being chosen above everyone else  `[1, 0, 0.2]`
 - Butterflies, and that giddy can't-stop-thinking-about-them feeling  `[1, 0.2, 0]`
@@ -274,7 +267,7 @@ Questions marked (multi) let you pick up to 2 answers (3 when there are 6 or mor
 - Desire and physical intimacy  `[0.3, 1, 0]`
 - Not much. My partner is my best friend, plus extra  `[0.6, 0.3, 1]`
 
-## 31. Which gestures from someone you love mean the most? (multi)
+## 30. Which gestures from someone you love mean the most? (multi)
 
 - Showing up when I'm sick or moving apartments  `[0.4, 0, 1]`
 - A date night planned just for the two of us  `[1, 0.3, 0.2]`
@@ -283,7 +276,7 @@ Questions marked (multi) let you pick up to 2 answers (3 when there are 6 or mor
 - Holding my hand like they're proud to be with me  `[1, 0.3, 0.2]`
 - Staying up late with me, talking about nothing  `[0.5, 0, 1]`
 
-## 32. When you fall for someone, your friendship with them feels…
+## 31. When you fall for someone, your friendship with them feels…
 
 - Like the foundation, with the romance on top  `[0.8, 0.3, 1]`
 - Like something new. The romance changes everything  `[1, 0.4, 0.1]`
