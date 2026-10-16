@@ -134,6 +134,7 @@ Questions marked (multi) let you pick up to 2 answers (3 when there are 6 or mor
 - Comfortable. We're friends, so we just talk it through  `[0, 0.3, 1]`
 - Essential. Clear agreements keep everyone safe and trusting  `[0.5, 0.5, 0.8]`
 - Constant. I check in all the time, even mid-scene  `[0.3, 0.8, 0.6]`
+- Tedious. Necessary, but let's get to the fun part  `[0.1, 0.6, 0.1]`
 
 ## 15. Which weekends sound best? (multi)
 

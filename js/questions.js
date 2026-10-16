@@ -106,7 +106,8 @@ window.QUESTIONS = [
     ["Loving. It's how I show I care", [1, 0.2, 0.4]],
     ["Comfortable. We're friends, so we just talk it through", [0, 0.3, 1]],
     ["Essential. Clear agreements keep everyone safe and trusting", [0.5, 0.5, 0.8]],
-    ["Constant. I check in all the time, even mid-scene", [0.3, 0.8, 0.6]] ]},
+    ["Constant. I check in all the time, even mid-scene", [0.3, 0.8, 0.6]],
+    ["Tedious. Necessary, but let's get to the fun part", [0.1, 0.6, 0.1]] ]},
   { q: "Which weekends sound best?", multi: true, a: [
     ["A cabin, a hot tub, and nobody else for 48 hours", [1, 1, 0]],
     ["A kink convention: workshops by day, afterparty by night", [0, 1, 0.6]],
