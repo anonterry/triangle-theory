@@ -230,7 +230,7 @@ Questions marked (multi) let you pick up to 2 answers (3 when there are 6 or mor
 
 - Butterflies: that giddy, can't-stop-thinking-about-you, in-love feeling  `[1, 0.2, 0]`
 - Desire: we can't keep our hands off each other  `[0, 1, 0]`
-- Both: best friends who can't keep our hands off each other  `[0.2, 0.9, 1]`
+- Friendship and desire: best friends who can't keep our hands off each other  `[0.2, 0.9, 1]`
 - Ease: I can be fully myself and we never run out of things to say  `[0, 0, 1]`
 - Devotion: choosing each other, building a life, being each other's person  `[1, 0, 0.4]`
 - Play: banter, inside jokes and being total goofballs together  `[0, 0.3, 1]`
