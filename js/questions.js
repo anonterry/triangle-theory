@@ -148,12 +148,14 @@ window.QUESTIONS = [
     ["Take it slow and ask whether this could be real love", [1, 0.4, 0.3]],
     ["Make a plan with terms and boundaries, then jump", [0, 0.8, 0.8]],
     ["Check in with my partner(s), then kiss them", [0.3, 1, 0.5]] ]},
-  { q: "What do sex-positive spaces (munches, workshops, play parties) mean to you?", a: [
-    ["A place to explore desire out loud", [0, 1, 0.3]],
+  { q: "What do sex-positive spaces (munches, workshops, play parties) mean to you?", keep: true, a: [
+    ["Not much. They're not really my scene", [0.3, 0, 0.3]],
+    ["A place to learn new skills and ask honest questions", [0.1, 0.4, 0.7]],
     ["A place to find my people", [0, 0.2, 1]],
+    ["A place to meet others living their sexuality openly", [0.3, 0.5, 1]],
     ["A place I might meet someone to fall for", [1, 0.3, 0.4]],
-    ["A place to meet others living non-monogamy openly", [0.3, 0.5, 1]],
-    ["Not much. They're not really my scene", [0.3, 0, 0.3]] ]},
+    ["A place to explore desire out loud", [0, 1, 0.3]],
+    ["A place to do a scene with my partner(s) while others watch", [0.4, 1, 0.3]] ]},
   { q: "Which relationship moments would you hate to miss?", multi: true, a: [
     ["The first “I love you”", [1, 0, 0.3]],
     ["The first time we really can't keep our hands off each other", [0, 1, 0]],
