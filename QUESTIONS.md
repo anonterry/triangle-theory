@@ -6,6 +6,7 @@ Questions marked (multi) let you pick up to 2 answers (3 when there are 6 or mor
 
 
 
+
 ## 1. Friday night, your phone buzzes. Which text makes you drop everything?
 
 - “Come over. Wear nothing under the coat.”  `[0, 1, 0]`
@@ -257,13 +258,14 @@ Questions marked (multi) let you pick up to 2 answers (3 when there are 6 or mor
 - Someone I can be silly with in bed and out of it  `[0.3, 0.9, 0.9]`
 - Someone whose company I love, with or without sex  `[0.6, 0.3, 1]`
 
-## 29. What does a partner give you that a friend doesn't? (multi)
+## 29. How is a romantic relationship different from a friendship for you? (multi)
 
-- The feeling of being chosen above everyone else  `[1, 0, 0.2]`
-- Butterflies, and that giddy can't-stop-thinking-about-them feeling  `[1, 0.2, 0]`
-- A shared future: a home, plans, a life built together  `[1, 0, 0.5]`
-- Desire and physical intimacy  `[0.3, 1, 0]`
-- Not much. My partner is my best friend, plus extra  `[0.6, 0.3, 1]`
+- Feeling special: being someone's person, not just one of the crowd  `[1, 0, 0.2]`
+- Butterflies: that giddy, can't-stop-thinking-about-them feeling  `[1, 0.2, 0]`
+- A shared future: plans, a home, building something together  `[1, 0, 0.5]`
+- Desire: physical and erotic connection  `[0.3, 1, 0]`
+- Not much. My partners are friends too, just with extra  `[0.6, 0.3, 1]`
+- It's blurry. I struggle to tell the difference sometimes  `[0.5, 0.3, 0.6]`
 
 ## 30. Which gestures from someone you love mean the most? (multi)
 
