@@ -131,9 +131,9 @@ Questions marked (multi) let you pick up to 2 answers (3 when there are 6 or mor
 
 - Sexy. A clear yes is hot  `[0, 1, 0.3]`
 - Loving. It's how I show I care  `[1, 0.2, 0.4]`
-- Like planning a road trip with a friend  `[0, 0.3, 1]`
-- Essential. Good agreements are what make non-monogamy work  `[0.5, 0.5, 0.8]`
-- Something I do all the time, even mid-scene, and I love it  `[0.3, 0.8, 0.6]`
+- Comfortable. We're friends, so we just talk it through  `[0, 0.3, 1]`
+- Essential. Clear agreements keep everyone safe and trusting  `[0.5, 0.5, 0.8]`
+- Constant. I check in all the time, even mid-scene  `[0.3, 0.8, 0.6]`
 
 ## 15. Which weekends sound best? (multi)
 
