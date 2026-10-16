@@ -73,6 +73,8 @@ window.QUESTIONS = [
     ["A threesome (or more) with people I adore, everyone eager", [0.6, 1, 0.5]] ]},
   { q: "Kink, fetish and power play are…", keep: true, a: [
     ["Not really my thing", [0.3, 0, 0.3]],
+    ["Curious, but I haven't tried much", [0.2, 0.4, 0.3]],
+    ["Take it or leave it. Fun now and then, no big deal", [0.1, 0.5, 0.3]],
     ["A great topic for friends to swap stories about", [0, 0.3, 1]],
     ["Something to explore with someone I trust", [0.6, 0.9, 0.2]],
     ["A core part of my sex life", [0, 1, 0]] ]},

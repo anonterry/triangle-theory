@@ -92,6 +92,8 @@ Questions marked (multi) let you pick up to 2 answers (3 when there are 6 or mor
 ## 10. Kink, fetish and power play are… (scale)
 
 - Not really my thing  `[0.3, 0, 0.3]`
+- Curious, but I haven't tried much  `[0.2, 0.4, 0.3]`
+- Take it or leave it. Fun now and then, no big deal  `[0.1, 0.5, 0.3]`
 - A great topic for friends to swap stories about  `[0, 0.3, 1]`
 - Something to explore with someone I trust  `[0.6, 0.9, 0.2]`
 - A core part of my sex life  `[0, 1, 0]`
