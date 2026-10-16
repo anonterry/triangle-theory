@@ -138,6 +138,7 @@ window.QUESTIONS = [
   { q: "Your love languages are…", multi: true, a: [
     ["Words and devotion", [1, 0, 0.3]],
     ["Touch, skin, and a lot of it", [0, 1, 0.5]],
+    ["Gifts and thoughtful little surprises", [0.6, 0.1, 0.4]],
     ["Quality time and inside jokes", [0, 0, 1]],
     ["Acts of service, like cooking dinner together (naked optional)", [0.8, 0.5, 0.3]] ]},
   { q: "You and a close friend both confess that you've always found each other hot. Next move?", a: [
