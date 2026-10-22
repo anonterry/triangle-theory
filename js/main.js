@@ -148,7 +148,6 @@
   $("back").onclick = () => { if (idx > 0) { idx--; render(); } };
   $("retake").onclick = () => { show("intro"); };
   $("download").onclick = download; $("copy").onclick = copyAgain;
-  $("count").textContent = Q.length;
   if (!fromQuery()) show("intro");
   if (document.fonts && document.fonts.ready) document.fonts.ready.then(drawResult).catch(() => {});
 })();
