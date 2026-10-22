@@ -42,7 +42,7 @@
     const q = Q[idx], multi = !!q.multi, cap = multi ? window.capOf(q) : 1;
     $("progress-bar").style.width = (idx / Q.length * 100) + "%";
     $("progress-text").textContent = `${idx + 1} / ${Q.length}`;
-    $("qnum").textContent = `QUESTION ${idx + 1}`;
+    $("qnum").textContent = `Question ${idx + 1}`;
     $("question").textContent = q.q;
     $("pick-hint").hidden = $("next").hidden = !multi;
     if (multi) $("pick-hint").textContent = `Pick up to ${cap}`;
@@ -86,8 +86,8 @@
     shared = isShared;
     const pct = shares.map(v => Math.round(v * 100)); pct[2] += 100 - pct[0] - pct[1] - pct[2];
     result = { shares, percent: pct, region: window.classify(shares) };
-    $("r-eyebrow").textContent = name ? `${name.toUpperCase()}'S RESULT` : (shared ? "THEIR RESULT" : "YOUR RESULT");
-    $("zone-kicker").textContent = shared ? "THEIR ZONE" : "YOUR ZONE";
+    $("r-eyebrow").textContent = name ? `${name}'s result` : (shared ? "Their result" : "Your result");
+    $("zone-kicker").textContent = shared ? "Their zone" : "Your zone";
     $("r-name").textContent = result.region.name; $("r-desc").textContent = result.region.desc;
     $("traits").innerHTML = ["Romance", "Sexuality", "Friendship"].map((l, i) => `<div class="trait"><span>${l}</span><div class="trait-track"><div class="trait-fill" data-w="${pct[i]}"></div></div><strong>${pct[i]}%</strong></div>`).join("");
     $("legend").innerHTML = window.REGIONS.map(r => `<li class="${r === result.region ? "mine" : ""}" style="--c:rgb(${r.color})"><i></i><span><b>${r.name}</b>${r.desc}</span></li>`).join("");

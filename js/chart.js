@@ -73,10 +73,10 @@
       ctx.fillText(text, 0, 0); if (ctx.letterSpacing !== undefined) ctx.letterSpacing = "0px"; ctx.restore();
     };
     const mL = pt(.5, .5, 0), mR = pt(.5, 0, .5), mB = pt(0, .5, .5), rad = Math.PI / 3;
-    const tPx = compact ? 28 : 40, tFont = `800 ${compact ? 10.5 / k : 13}px ${SANS}`, tCol = "#e6f2f0", sp = compact ? `${1.2 / k}px` : "3px";
-    axisTitle("\u2190 SEXUALITY", mL, -.866, -.5, -rad, tPx, tFont, tCol, sp);
-    axisTitle("\u2190 ROMANCE", mR, .866, -.5, rad, tPx, tFont, tCol, sp);
-    axisTitle("FRIENDSHIP \u2192", mB, 0, 1, 0, compact ? 50 : 38, tFont, tCol, sp);
+    const tPx = compact ? 28 : 40, tFont = `700 ${compact ? 12 / k : 15}px ${SANS}`, tCol = "#e6f2f0", sp = "0px";
+    axisTitle("\u2190 Sexuality", mL, -.866, -.5, -rad, tPx, tFont, tCol, sp);
+    axisTitle("\u2190 Romance", mR, .866, -.5, rad, tPx, tFont, tCol, sp);
+    axisTitle("Friendship \u2192", mB, 0, 1, 0, compact ? 50 : 38, tFont, tCol, sp);
     if (!compact) {
       const lFont = `italic 500 13px ${SANS}`;
       axisTitle("aplatonic line (no friendship)", mL, -.866, -.5, -rad, 66, lFont, "#c25ae0", "0px");
@@ -127,12 +127,9 @@
     canvas.width = CW * SCALE; canvas.height = H * SCALE;
     const ctx = canvas.getContext("2d"); ctx.scale(SCALE, SCALE);
     ctx.fillStyle = "#061317"; ctx.fillRect(0, 0, CW, H);
-    const bg = ctx.createRadialGradient(180, 0, 0, 180, 0, 520); bg.addColorStop(0, accent + "33"); bg.addColorStop(1, accent + "00");
-    ctx.fillStyle = bg; ctx.fillRect(0, 0, CW, H);
     ctx.textAlign = "center"; ctx.textBaseline = "alphabetic";
-    ctx.fillStyle = accent; ctx.font = `700 15px ${SANS}`;
-    if (ctx.letterSpacing !== undefined) ctx.letterSpacing = "4px";
-    ctx.fillText(name ? (name.toUpperCase() + "'S RESULT") : "YOUR RESULT", CW / 2 + 2, 58);
+    ctx.fillStyle = accent; ctx.font = `600 22px ${SANS}`;
+    ctx.fillText(name ? (name + "'s result") : "My result", CW / 2, 58);
     ctx.fillStyle = "#fff"; ctx.font = `600 66px ${SERIF}`; if (ctx.letterSpacing !== undefined) ctx.letterSpacing = "-1px";
     ctx.fillText("Triangle Theory", CW / 2, 120);
     if (ctx.letterSpacing !== undefined) ctx.letterSpacing = "0px";
@@ -152,14 +149,12 @@
     const W = 1200, H = 630; canvas.width = W; canvas.height = H;
     const ctx = canvas.getContext("2d");
     ctx.fillStyle = "#061317"; ctx.fillRect(0, 0, W, H);
-    const g = ctx.createRadialGradient(240, 0, 0, 240, 0, 700); g.addColorStop(0, accent + "33"); g.addColorStop(1, accent + "00");
-    ctx.fillStyle = g; ctx.fillRect(0, 0, W, H);
     ctx.save(); ctx.translate(26, 44); ctx.scale(.9, .9);
     drawChart(ctx, { shares: region.center, region }, { k: 1, compact: false, accent, noUser: true, og: true });
     ctx.restore();
     const x = 780, w = 380; ctx.textAlign = "left"; ctx.textBaseline = "alphabetic";
-    ctx.fillStyle = accent; ctx.font = `700 15px ${SANS}`; if (ctx.letterSpacing !== undefined) ctx.letterSpacing = "4px";
-    ctx.fillText("TRIANGLE THEORY", x, 120); if (ctx.letterSpacing !== undefined) ctx.letterSpacing = "0px";
+    ctx.fillStyle = accent; ctx.font = `600 20px ${SANS}`;
+    ctx.fillText("Triangle Theory", x, 120);
     ctx.fillStyle = "#fff"; let fs = 46; // shrink until the longest word fits the text column
     for (; fs > 30; fs -= 2) { ctx.font = `600 ${fs}px ${SERIF}`; if (Math.max(...region.name.split(" ").map(s => ctx.measureText(s).width)) <= w) break; }
     ctx.font = `600 ${fs}px ${SERIF}`;

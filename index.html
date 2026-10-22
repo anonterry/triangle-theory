@@ -9,17 +9,16 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=20261016k">
+  <link rel="stylesheet" href="css/style.css?v=20261022a">
 </head>
 <body>
 <div class="app">
 
   <section id="intro" class="screen active">
     <div class="hero">
-      <div class="eyebrow">A QUIZ ABOUT HOW YOU CONNECT</div>
-      <h1>Triangle <em>Theory</em></h1>
-      <p class="tagline">Where do you land between romance, sexuality and friendship?</p>
-      <p class="intro">Answer <span id="count">23</span> quick questions and we'll plot you on the triangle. It's for fun and self-reflection, not a diagnosis. Nothing you answer leaves your device.</p>
+      <h1>Triangle Theory</h1>
+      <p class="tagline">How do romance, sexuality and friendship fit together for you?</p>
+      <p class="intro">Answer <span id="count">23</span> questions and see where you land on the triangle. It's for fun, not a diagnosis. Your answers stay on your device.</p>
     </div>
     <dl class="defs">
       <div><dt>Romance</dt><dd>Butterflies, longing and being <em>in love</em>. Devotion to someone as <em>your</em> person (or people).</dd></div>
@@ -31,7 +30,7 @@
       <input id="name" type="text" placeholder="Name or nickname (optional)" maxlength="24" autocomplete="off" autocapitalize="words">
       <div class="setup-label" id="color-label">Pick your color</div>
       <div class="colors" role="radiogroup" aria-labelledby="color-label" id="colors"></div>
-      <button id="start" class="primary" type="button">Start the quiz &#10022;</button>
+      <button id="start" class="primary" type="button">Start the quiz</button>
     </div>
   </section>
 
@@ -56,7 +55,7 @@
       <div class="question-column">
         <div class="progress-track"><div id="progress-bar" class="progress-bar"></div></div>
         <div class="card question-card">
-          <div class="question-number" id="qnum">QUESTION 1</div>
+          <div class="question-number" id="qnum">Question 1</div>
           <h3 id="question"></h3>
           <p id="pick-hint" class="pick-hint" hidden></p>
           <div id="answers" class="answers"></div>
@@ -69,11 +68,11 @@
 
   <section id="result" class="screen">
     <div class="card results">
-      <div class="eyebrow" id="r-eyebrow">YOUR RESULT</div>
+      <div class="eyebrow" id="r-eyebrow">Your result</div>
       <div class="result-layout">
         <div class="chart-wrap"><canvas id="chart" role="img"></canvas></div>
         <div class="result-copy">
-          <div class="type-kicker" id="zone-kicker">YOUR ZONE</div>
+          <div class="type-kicker" id="zone-kicker">Your zone</div>
           <h3 id="r-name"></h3>
           <blockquote id="r-desc"></blockquote>
           <div class="traits" id="traits"></div>
@@ -83,7 +82,7 @@
         <summary>See all the zones</summary>
         <ul id="legend" class="legend"></ul>
       </details>
-      <a id="take" class="primary btn take" href="./" hidden>Take it yourself &#10022;</a>
+      <a id="take" class="primary btn take" href="./" hidden>Take it yourself</a>
       <div id="owner-actions">
         <div class="share-box" id="share-box">
           <input id="share-url" type="text" readonly aria-label="Shareable link">
@@ -99,10 +98,10 @@
   </section>
 
 </div>
-<script src="js/questions.js?v=20261016k"></script>
-<script src="js/regions.js?v=20261016k"></script>
-<script src="js/scoring.js?v=20261016k"></script>
-<script src="js/chart.js?v=20261016k"></script>
-<script src="js/main.js?v=20261016k"></script>
+<script src="js/questions.js?v=20261022a"></script>
+<script src="js/regions.js?v=20261022a"></script>
+<script src="js/scoring.js?v=20261022a"></script>
+<script src="js/chart.js?v=20261022a"></script>
+<script src="js/main.js?v=20261022a"></script>
 </body>
 </html>
